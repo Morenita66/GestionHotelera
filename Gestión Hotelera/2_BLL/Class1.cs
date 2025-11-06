@@ -8,5 +8,14 @@ namespace _2_BLL
 {
     public class Class1
     {
+        //asdasdasd
+
+        public int prueba()
+        {
+            Console.WriteLine("Pruebaaaa0");
+
+            return 1;
+
+        }
     }
 }
