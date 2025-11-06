@@ -1,0 +1,24 @@
+# Ignorar la carpeta de configuración de Visual Studio
+.vs/
+
+# Ignorar la carpeta del repositorio Git (no se debe versionar dentro de otro)
+.git/
+
+# Archivos temporales y de compilación
+bin/
+obj/
+*.user
+*.suo
+*.cache
+*.log
+*.pdb
+
+# Archivos de publicación o de salida
+*.exe
+*.dll
+*.db
+*.zip
+
+# Archivos del sistema
+Thumbs.db
+Desktop.ini
