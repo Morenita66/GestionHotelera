@@ -35,10 +35,17 @@ namespace _1_UI
 
         private void btnReserva_Click(object sender, EventArgs e)
         {
-
+            frmReserva datos = new frmReserva();
+            datos.Show();
+            this.Hide();
         }
 
         private void btnHabitación_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnEstudiante_Paint(object sender, PaintEventArgs e)
         {
 
         }
