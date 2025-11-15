@@ -42,6 +42,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.lblRegistrarReservas = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -52,7 +53,7 @@
             // 
             this.groupBox1.Controls.Add(this.txtCliente);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(14, 14);
+            this.groupBox1.Location = new System.Drawing.Point(22, 61);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -63,10 +64,10 @@
             // 
             // txtCliente
             // 
-            this.txtCliente.Location = new System.Drawing.Point(70, 29);
+            this.txtCliente.Location = new System.Drawing.Point(113, 29);
             this.txtCliente.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtCliente.Name = "txtCliente";
-            this.txtCliente.Size = new System.Drawing.Size(326, 23);
+            this.txtCliente.Size = new System.Drawing.Size(283, 27);
             this.txtCliente.TabIndex = 1;
             // 
             // label1
@@ -75,7 +76,7 @@
             this.label1.Location = new System.Drawing.Point(7, 32);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 15);
+            this.label1.Size = new System.Drawing.Size(61, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Cliente:";
             // 
@@ -83,7 +84,7 @@
             // 
             this.groupBox2.Controls.Add(this.txtRecepcionista);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(14, 90);
+            this.groupBox2.Location = new System.Drawing.Point(22, 137);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -94,10 +95,10 @@
             // 
             // txtRecepcionista
             // 
-            this.txtRecepcionista.Location = new System.Drawing.Point(93, 29);
+            this.txtRecepcionista.Location = new System.Drawing.Point(113, 29);
             this.txtRecepcionista.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtRecepcionista.Name = "txtRecepcionista";
-            this.txtRecepcionista.Size = new System.Drawing.Size(303, 23);
+            this.txtRecepcionista.Size = new System.Drawing.Size(283, 27);
             this.txtRecepcionista.TabIndex = 1;
             // 
             // label2
@@ -106,7 +107,7 @@
             this.label2.Location = new System.Drawing.Point(7, 32);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 15);
+            this.label2.Size = new System.Drawing.Size(109, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "Recepcionista:";
             // 
@@ -114,7 +115,7 @@
             // 
             this.groupBox3.Controls.Add(this.txtTotal);
             this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Location = new System.Drawing.Point(14, 166);
+            this.groupBox3.Location = new System.Drawing.Point(22, 213);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -125,10 +126,10 @@
             // 
             // txtTotal
             // 
-            this.txtTotal.Location = new System.Drawing.Point(52, 29);
+            this.txtTotal.Location = new System.Drawing.Point(113, 29);
             this.txtTotal.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(344, 23);
+            this.txtTotal.Size = new System.Drawing.Size(283, 27);
             this.txtTotal.TabIndex = 1;
             // 
             // label3
@@ -137,7 +138,7 @@
             this.label3.Location = new System.Drawing.Point(7, 32);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 15);
+            this.label3.Size = new System.Drawing.Size(48, 20);
             this.label3.TabIndex = 0;
             this.label3.Text = "Total:";
             // 
@@ -145,7 +146,7 @@
             // 
             this.groupBox4.Controls.Add(this.txtEstado);
             this.groupBox4.Controls.Add(this.label4);
-            this.groupBox4.Location = new System.Drawing.Point(14, 242);
+            this.groupBox4.Location = new System.Drawing.Point(22, 289);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -156,10 +157,10 @@
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(58, 29);
+            this.txtEstado.Location = new System.Drawing.Point(113, 25);
             this.txtEstado.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(338, 23);
+            this.txtEstado.Size = new System.Drawing.Size(283, 27);
             this.txtEstado.TabIndex = 1;
             // 
             // label4
@@ -168,7 +169,7 @@
             this.label4.Location = new System.Drawing.Point(7, 32);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 15);
+            this.label4.Size = new System.Drawing.Size(60, 20);
             this.label4.TabIndex = 0;
             this.label4.Text = "Estado:";
             // 
@@ -176,7 +177,7 @@
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.ForestGreen;
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnGuardar.Location = new System.Drawing.Point(222, 323);
+            this.btnGuardar.Location = new System.Drawing.Point(242, 372);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(88, 35);
@@ -189,7 +190,7 @@
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.ForestGreen;
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCancelar.Location = new System.Drawing.Point(327, 323);
+            this.btnCancelar.Location = new System.Drawing.Point(342, 372);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(88, 35);
@@ -198,12 +199,25 @@
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // lblRegistrarReservas
+            // 
+            this.lblRegistrarReservas.AutoSize = true;
+            this.lblRegistrarReservas.BackColor = System.Drawing.Color.YellowGreen;
+            this.lblRegistrarReservas.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegistrarReservas.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblRegistrarReservas.Location = new System.Drawing.Point(129, 9);
+            this.lblRegistrarReservas.Name = "lblRegistrarReservas";
+            this.lblRegistrarReservas.Size = new System.Drawing.Size(208, 31);
+            this.lblRegistrarReservas.TabIndex = 14;
+            this.lblRegistrarReservas.Text = "Registrar Reservas";
+            // 
             // frmRegistrarReserva
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.ClientSize = new System.Drawing.Size(436, 372);
+            this.ClientSize = new System.Drawing.Size(463, 440);
+            this.Controls.Add(this.lblRegistrarReservas);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.groupBox4);
@@ -215,6 +229,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "frmRegistrarReserva";
             this.Text = "frmRegistrarReserva";
+            this.Load += new System.EventHandler(this.frmRegistrarReserva_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -224,6 +239,7 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -243,5 +259,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Label lblRegistrarReservas;
     }
 }

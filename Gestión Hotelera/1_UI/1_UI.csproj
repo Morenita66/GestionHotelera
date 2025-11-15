@@ -58,6 +58,12 @@
     <Compile Include="frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRegistrarHabitaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistrarHabitaciones.Designer.cs">
+      <DependentUpon>frmRegistrarHabitaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRegistrarReserva.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistrarHabitaciones.resx">
+      <DependentUpon>frmRegistrarHabitaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegistrarReserva.resx">
       <DependentUpon>frmRegistrarReserva.cs</DependentUpon>
