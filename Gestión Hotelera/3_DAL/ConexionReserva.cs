@@ -7,7 +7,8 @@ namespace _3_DAL
 {
     public class ConexionReserva
     {
-        public const string Cadena = "Server=SANTI;Initial Catalog=HotelDB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True;";
+     public const string Cadena = "data source=(localdb)\\MSSQLLocalDB; initial catalog=HotelDB; integrated security=sspi;";
+
 
         public List<Reserva> Leer()
         {

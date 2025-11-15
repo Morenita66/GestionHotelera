@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _4_MODEL
+namespace _3_DAL
 {
-    public class Class1
+    internal class ConexiónHabitación
     {
-
     }
 }
