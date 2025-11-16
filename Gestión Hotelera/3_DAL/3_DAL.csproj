@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConexionCliente.cs" />
     <Compile Include="ConexionReserva.cs" />
     <Compile Include="ConexiónHabitación.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
