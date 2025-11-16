@@ -1,0 +1,471 @@
+﻿namespace _1_UI
+{
+    partial class FrmCliente
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.lblEdad = new System.Windows.Forms.Label();
+            this.txtEdadCliente = new System.Windows.Forms.TextBox();
+            this.txtApellidoCliente = new System.Windows.Forms.TextBox();
+            this.txtEmailCliente = new System.Windows.Forms.TextBox();
+            this.txtTelefonoCliente = new System.Windows.Forms.TextBox();
+            this.txtDniCliente = new System.Windows.Forms.TextBox();
+            this.txtNombreCliente = new System.Windows.Forms.TextBox();
+            this.lblDniCliente = new System.Windows.Forms.Label();
+            this.lblNombreCliente = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblTelefonoCliente = new System.Windows.Forms.Label();
+            this.lblEmailCliente = new System.Windows.Forms.Label();
+            this.lblApellido = new System.Windows.Forms.Label();
+            this.lblIdDomicilio = new System.Windows.Forms.Label();
+            this.txtIdDomicilio = new System.Windows.Forms.TextBox();
+            this.lblDomicilio = new System.Windows.Forms.Label();
+            this.txtCalleDomicilio = new System.Windows.Forms.TextBox();
+            this.txtNumeracionDomicilio = new System.Windows.Forms.TextBox();
+            this.txtPaisDomicilio = new System.Windows.Forms.TextBox();
+            this.txtBarrioDomicilio = new System.Windows.Forms.TextBox();
+            this.txtCodigoPostalDomicilio = new System.Windows.Forms.TextBox();
+            this.lblPaisDomicilio = new System.Windows.Forms.Label();
+            this.lblCalle = new System.Windows.Forms.Label();
+            this.lblCodigoPostalDomicilio = new System.Windows.Forms.Label();
+            this.lblBarrioDomicilio = new System.Windows.Forms.Label();
+            this.lblNumeracionDomicilio = new System.Windows.Forms.Label();
+            this.grbBusqueda = new System.Windows.Forms.GroupBox();
+            this.textBoxBusqueda = new System.Windows.Forms.TextBox();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.dgvCliente = new System.Windows.Forms.DataGridView();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnVolver = new System.Windows.Forms.Button();
+            this.grbBusqueda.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // lblEdad
+            // 
+            this.lblEdad.AutoSize = true;
+            this.lblEdad.Location = new System.Drawing.Point(64, 236);
+            this.lblEdad.Name = "lblEdad";
+            this.lblEdad.Size = new System.Drawing.Size(35, 13);
+            this.lblEdad.TabIndex = 53;
+            this.lblEdad.Text = "Edad:";
+            // 
+            // txtEdadCliente
+            // 
+            this.txtEdadCliente.Location = new System.Drawing.Point(120, 229);
+            this.txtEdadCliente.Name = "txtEdadCliente";
+            this.txtEdadCliente.Size = new System.Drawing.Size(100, 20);
+            this.txtEdadCliente.TabIndex = 52;
+            // 
+            // txtApellidoCliente
+            // 
+            this.txtApellidoCliente.Location = new System.Drawing.Point(120, 91);
+            this.txtApellidoCliente.Name = "txtApellidoCliente";
+            this.txtApellidoCliente.Size = new System.Drawing.Size(100, 20);
+            this.txtApellidoCliente.TabIndex = 51;
+            // 
+            // txtEmailCliente
+            // 
+            this.txtEmailCliente.Location = new System.Drawing.Point(120, 120);
+            this.txtEmailCliente.Name = "txtEmailCliente";
+            this.txtEmailCliente.Size = new System.Drawing.Size(100, 20);
+            this.txtEmailCliente.TabIndex = 50;
+            // 
+            // txtTelefonoCliente
+            // 
+            this.txtTelefonoCliente.Location = new System.Drawing.Point(120, 150);
+            this.txtTelefonoCliente.Name = "txtTelefonoCliente";
+            this.txtTelefonoCliente.Size = new System.Drawing.Size(100, 20);
+            this.txtTelefonoCliente.TabIndex = 49;
+            // 
+            // txtDniCliente
+            // 
+            this.txtDniCliente.Location = new System.Drawing.Point(120, 188);
+            this.txtDniCliente.Name = "txtDniCliente";
+            this.txtDniCliente.Size = new System.Drawing.Size(100, 20);
+            this.txtDniCliente.TabIndex = 48;
+            // 
+            // txtNombreCliente
+            // 
+            this.txtNombreCliente.Location = new System.Drawing.Point(120, 61);
+            this.txtNombreCliente.Name = "txtNombreCliente";
+            this.txtNombreCliente.Size = new System.Drawing.Size(100, 20);
+            this.txtNombreCliente.TabIndex = 47;
+            // 
+            // lblDniCliente
+            // 
+            this.lblDniCliente.AutoSize = true;
+            this.lblDniCliente.Location = new System.Drawing.Point(64, 195);
+            this.lblDniCliente.Name = "lblDniCliente";
+            this.lblDniCliente.Size = new System.Drawing.Size(26, 13);
+            this.lblDniCliente.TabIndex = 46;
+            this.lblDniCliente.Text = "Dni:";
+            // 
+            // lblNombreCliente
+            // 
+            this.lblNombreCliente.AutoSize = true;
+            this.lblNombreCliente.Location = new System.Drawing.Point(43, 61);
+            this.lblNombreCliente.Name = "lblNombreCliente";
+            this.lblNombreCliente.Size = new System.Drawing.Size(47, 13);
+            this.lblNombreCliente.TabIndex = 45;
+            this.lblNombreCliente.Text = "Nombre:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.YellowGreen;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(0, -3);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(247, 32);
+            this.label4.TabIndex = 44;
+            this.label4.Text = "DATOS PERSONALES";
+            // 
+            // lblTelefonoCliente
+            // 
+            this.lblTelefonoCliente.AutoSize = true;
+            this.lblTelefonoCliente.Location = new System.Drawing.Point(47, 157);
+            this.lblTelefonoCliente.Name = "lblTelefonoCliente";
+            this.lblTelefonoCliente.Size = new System.Drawing.Size(52, 13);
+            this.lblTelefonoCliente.TabIndex = 43;
+            this.lblTelefonoCliente.Text = "Telefono:";
+            // 
+            // lblEmailCliente
+            // 
+            this.lblEmailCliente.AutoSize = true;
+            this.lblEmailCliente.Location = new System.Drawing.Point(57, 124);
+            this.lblEmailCliente.Name = "lblEmailCliente";
+            this.lblEmailCliente.Size = new System.Drawing.Size(35, 13);
+            this.lblEmailCliente.TabIndex = 42;
+            this.lblEmailCliente.Text = "Email:";
+            // 
+            // lblApellido
+            // 
+            this.lblApellido.AutoSize = true;
+            this.lblApellido.Location = new System.Drawing.Point(43, 91);
+            this.lblApellido.Name = "lblApellido";
+            this.lblApellido.Size = new System.Drawing.Size(47, 13);
+            this.lblApellido.TabIndex = 41;
+            this.lblApellido.Text = "Apellido:";
+            // 
+            // lblIdDomicilio
+            // 
+            this.lblIdDomicilio.AutoSize = true;
+            this.lblIdDomicilio.Location = new System.Drawing.Point(350, 236);
+            this.lblIdDomicilio.Name = "lblIdDomicilio";
+            this.lblIdDomicilio.Size = new System.Drawing.Size(62, 13);
+            this.lblIdDomicilio.TabIndex = 66;
+            this.lblIdDomicilio.Text = "Id domicilio:";
+            // 
+            // txtIdDomicilio
+            // 
+            this.txtIdDomicilio.Location = new System.Drawing.Point(419, 229);
+            this.txtIdDomicilio.Name = "txtIdDomicilio";
+            this.txtIdDomicilio.Size = new System.Drawing.Size(100, 20);
+            this.txtIdDomicilio.TabIndex = 65;
+            // 
+            // lblDomicilio
+            // 
+            this.lblDomicilio.AutoSize = true;
+            this.lblDomicilio.BackColor = System.Drawing.Color.YellowGreen;
+            this.lblDomicilio.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDomicilio.Location = new System.Drawing.Point(377, -3);
+            this.lblDomicilio.Name = "lblDomicilio";
+            this.lblDomicilio.Size = new System.Drawing.Size(142, 32);
+            this.lblDomicilio.TabIndex = 64;
+            this.lblDomicilio.Text = "DOMICILIO";
+            // 
+            // txtCalleDomicilio
+            // 
+            this.txtCalleDomicilio.Location = new System.Drawing.Point(419, 61);
+            this.txtCalleDomicilio.Name = "txtCalleDomicilio";
+            this.txtCalleDomicilio.Size = new System.Drawing.Size(100, 20);
+            this.txtCalleDomicilio.TabIndex = 63;
+            // 
+            // txtNumeracionDomicilio
+            // 
+            this.txtNumeracionDomicilio.Location = new System.Drawing.Point(419, 88);
+            this.txtNumeracionDomicilio.Name = "txtNumeracionDomicilio";
+            this.txtNumeracionDomicilio.Size = new System.Drawing.Size(100, 20);
+            this.txtNumeracionDomicilio.TabIndex = 62;
+            // 
+            // txtPaisDomicilio
+            // 
+            this.txtPaisDomicilio.Location = new System.Drawing.Point(419, 192);
+            this.txtPaisDomicilio.Name = "txtPaisDomicilio";
+            this.txtPaisDomicilio.Size = new System.Drawing.Size(100, 20);
+            this.txtPaisDomicilio.TabIndex = 61;
+            // 
+            // txtBarrioDomicilio
+            // 
+            this.txtBarrioDomicilio.Location = new System.Drawing.Point(419, 117);
+            this.txtBarrioDomicilio.Name = "txtBarrioDomicilio";
+            this.txtBarrioDomicilio.Size = new System.Drawing.Size(100, 20);
+            this.txtBarrioDomicilio.TabIndex = 60;
+            // 
+            // txtCodigoPostalDomicilio
+            // 
+            this.txtCodigoPostalDomicilio.Location = new System.Drawing.Point(423, 150);
+            this.txtCodigoPostalDomicilio.Name = "txtCodigoPostalDomicilio";
+            this.txtCodigoPostalDomicilio.Size = new System.Drawing.Size(100, 20);
+            this.txtCodigoPostalDomicilio.TabIndex = 59;
+            // 
+            // lblPaisDomicilio
+            // 
+            this.lblPaisDomicilio.AutoSize = true;
+            this.lblPaisDomicilio.Location = new System.Drawing.Point(357, 195);
+            this.lblPaisDomicilio.Name = "lblPaisDomicilio";
+            this.lblPaisDomicilio.Size = new System.Drawing.Size(30, 13);
+            this.lblPaisDomicilio.TabIndex = 58;
+            this.lblPaisDomicilio.Text = "Pais:";
+            // 
+            // lblCalle
+            // 
+            this.lblCalle.AutoSize = true;
+            this.lblCalle.Location = new System.Drawing.Point(350, 61);
+            this.lblCalle.Name = "lblCalle";
+            this.lblCalle.Size = new System.Drawing.Size(33, 13);
+            this.lblCalle.TabIndex = 57;
+            this.lblCalle.Text = "Calle:";
+            // 
+            // lblCodigoPostalDomicilio
+            // 
+            this.lblCodigoPostalDomicilio.AutoSize = true;
+            this.lblCodigoPostalDomicilio.Location = new System.Drawing.Point(342, 153);
+            this.lblCodigoPostalDomicilio.Name = "lblCodigoPostalDomicilio";
+            this.lblCodigoPostalDomicilio.Size = new System.Drawing.Size(75, 13);
+            this.lblCodigoPostalDomicilio.TabIndex = 56;
+            this.lblCodigoPostalDomicilio.Text = "Codigo Postal:";
+            // 
+            // lblBarrioDomicilio
+            // 
+            this.lblBarrioDomicilio.AutoSize = true;
+            this.lblBarrioDomicilio.Location = new System.Drawing.Point(350, 120);
+            this.lblBarrioDomicilio.Name = "lblBarrioDomicilio";
+            this.lblBarrioDomicilio.Size = new System.Drawing.Size(37, 13);
+            this.lblBarrioDomicilio.TabIndex = 55;
+            this.lblBarrioDomicilio.Text = "Barrio:";
+            // 
+            // lblNumeracionDomicilio
+            // 
+            this.lblNumeracionDomicilio.AutoSize = true;
+            this.lblNumeracionDomicilio.Location = new System.Drawing.Point(346, 91);
+            this.lblNumeracionDomicilio.Name = "lblNumeracionDomicilio";
+            this.lblNumeracionDomicilio.Size = new System.Drawing.Size(67, 13);
+            this.lblNumeracionDomicilio.TabIndex = 54;
+            this.lblNumeracionDomicilio.Text = "Numeracion:";
+            // 
+            // grbBusqueda
+            // 
+            this.grbBusqueda.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.grbBusqueda.Controls.Add(this.textBoxBusqueda);
+            this.grbBusqueda.Controls.Add(this.btnEliminar);
+            this.grbBusqueda.Controls.Add(this.btnBuscar);
+            this.grbBusqueda.Controls.Add(this.btnModificar);
+            this.grbBusqueda.Controls.Add(this.btnNuevo);
+            this.grbBusqueda.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.grbBusqueda.Location = new System.Drawing.Point(550, -3);
+            this.grbBusqueda.Name = "grbBusqueda";
+            this.grbBusqueda.Size = new System.Drawing.Size(252, 267);
+            this.grbBusqueda.TabIndex = 67;
+            this.grbBusqueda.TabStop = false;
+            this.grbBusqueda.Text = "Búsqueda por nombre";
+            // 
+            // textBoxBusqueda
+            // 
+            this.textBoxBusqueda.Location = new System.Drawing.Point(10, 30);
+            this.textBoxBusqueda.Name = "textBoxBusqueda";
+            this.textBoxBusqueda.Size = new System.Drawing.Size(130, 23);
+            this.textBoxBusqueda.TabIndex = 0;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnEliminar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnEliminar.Location = new System.Drawing.Point(10, 93);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(130, 28);
+            this.btnEliminar.TabIndex = 2;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnBuscar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBuscar.Location = new System.Drawing.Point(10, 59);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(130, 28);
+            this.btnBuscar.TabIndex = 1;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnModificar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnModificar.Location = new System.Drawing.Point(10, 142);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(130, 32);
+            this.btnModificar.TabIndex = 8;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = false;
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnNuevo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnNuevo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnNuevo.Location = new System.Drawing.Point(10, 191);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(130, 32);
+            this.btnNuevo.TabIndex = 9;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = false;
+            // 
+            // dgvCliente
+            // 
+            this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCliente.Location = new System.Drawing.Point(-2, 260);
+            this.dgvCliente.Name = "dgvCliente";
+            this.dgvCliente.Size = new System.Drawing.Size(546, 194);
+            this.dgvCliente.TabIndex = 68;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnGuardar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnGuardar.Location = new System.Drawing.Point(693, 399);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(64, 39);
+            this.btnGuardar.TabIndex = 70;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            // 
+            // btnVolver
+            // 
+            this.btnVolver.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnVolver.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnVolver.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnVolver.Location = new System.Drawing.Point(567, 399);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(64, 39);
+            this.btnVolver.TabIndex = 69;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = false;
+            // 
+            // FrmCliente
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.btnVolver);
+            this.Controls.Add(this.dgvCliente);
+            this.Controls.Add(this.grbBusqueda);
+            this.Controls.Add(this.lblIdDomicilio);
+            this.Controls.Add(this.txtIdDomicilio);
+            this.Controls.Add(this.lblDomicilio);
+            this.Controls.Add(this.txtCalleDomicilio);
+            this.Controls.Add(this.txtNumeracionDomicilio);
+            this.Controls.Add(this.txtPaisDomicilio);
+            this.Controls.Add(this.txtBarrioDomicilio);
+            this.Controls.Add(this.txtCodigoPostalDomicilio);
+            this.Controls.Add(this.lblPaisDomicilio);
+            this.Controls.Add(this.lblCalle);
+            this.Controls.Add(this.lblCodigoPostalDomicilio);
+            this.Controls.Add(this.lblBarrioDomicilio);
+            this.Controls.Add(this.lblNumeracionDomicilio);
+            this.Controls.Add(this.lblEdad);
+            this.Controls.Add(this.txtEdadCliente);
+            this.Controls.Add(this.txtApellidoCliente);
+            this.Controls.Add(this.txtEmailCliente);
+            this.Controls.Add(this.txtTelefonoCliente);
+            this.Controls.Add(this.txtDniCliente);
+            this.Controls.Add(this.txtNombreCliente);
+            this.Controls.Add(this.lblDniCliente);
+            this.Controls.Add(this.lblNombreCliente);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblTelefonoCliente);
+            this.Controls.Add(this.lblEmailCliente);
+            this.Controls.Add(this.lblApellido);
+            this.Name = "FrmCliente";
+            this.Text = "FrmCliente";
+            this.grbBusqueda.ResumeLayout(false);
+            this.grbBusqueda.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Label lblEdad;
+        private System.Windows.Forms.TextBox txtEdadCliente;
+        private System.Windows.Forms.TextBox txtApellidoCliente;
+        private System.Windows.Forms.TextBox txtEmailCliente;
+        private System.Windows.Forms.TextBox txtTelefonoCliente;
+        private System.Windows.Forms.TextBox txtDniCliente;
+        private System.Windows.Forms.TextBox txtNombreCliente;
+        private System.Windows.Forms.Label lblDniCliente;
+        private System.Windows.Forms.Label lblNombreCliente;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblTelefonoCliente;
+        private System.Windows.Forms.Label lblEmailCliente;
+        private System.Windows.Forms.Label lblApellido;
+        private System.Windows.Forms.Label lblIdDomicilio;
+        private System.Windows.Forms.TextBox txtIdDomicilio;
+        private System.Windows.Forms.Label lblDomicilio;
+        private System.Windows.Forms.TextBox txtCalleDomicilio;
+        private System.Windows.Forms.TextBox txtNumeracionDomicilio;
+        private System.Windows.Forms.TextBox txtPaisDomicilio;
+        private System.Windows.Forms.TextBox txtBarrioDomicilio;
+        private System.Windows.Forms.TextBox txtCodigoPostalDomicilio;
+        private System.Windows.Forms.Label lblPaisDomicilio;
+        private System.Windows.Forms.Label lblCalle;
+        private System.Windows.Forms.Label lblCodigoPostalDomicilio;
+        private System.Windows.Forms.Label lblBarrioDomicilio;
+        private System.Windows.Forms.Label lblNumeracionDomicilio;
+        private System.Windows.Forms.GroupBox grbBusqueda;
+        private System.Windows.Forms.TextBox textBoxBusqueda;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.DataGridView dgvCliente;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnVolver;
+    }
+}

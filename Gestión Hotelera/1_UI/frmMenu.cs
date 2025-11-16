@@ -30,7 +30,9 @@ namespace _1_UI
 
         private void btnCliente_Click(object sender, EventArgs e)
         {
-
+            //generamos instancia del obj de la clase
+            FrmCliente frmCliente = new FrmCliente();
+            frmCliente.ShowDialog();
         }
 
         private void btnReserva_Click(object sender, EventArgs e)
