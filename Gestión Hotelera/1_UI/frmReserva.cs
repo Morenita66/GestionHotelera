@@ -141,5 +141,20 @@ namespace _1_UI
                 txtEstado.Text = fila.Cells["Estado"].Value?.ToString() ?? "";
             }
         }
+
+        private void dgvReservas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void grbBusqueda_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grbDatos_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

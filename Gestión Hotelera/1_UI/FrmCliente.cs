@@ -16,5 +16,10 @@ namespace _1_UI
         {
             InitializeComponent();
         }
+
+        private void FrmCliente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

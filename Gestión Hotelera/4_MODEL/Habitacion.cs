@@ -6,25 +6,29 @@ using System.Threading.Tasks;
 
 namespace _4_MODEL
 {
-    internal class Habitaciones
+    public class Habitacion
     {
         // Estas variables solo pueden ser usadas dentro de esta clase:
-        private int habitacion;
+        private int idHabitacion;
         private string tipo;
-        private double precioPorNoche;
+        private int precioPorNoche;
         private string estado;
 
         // Las propiedades permiten acceder o modificar los atributos privados:
-        public int Habitacion { get => habitacion; set => habitacion = value; }
-        public string Tipo { get => tipo; set => tipo = value; }
-        public double PrecioPorNoche { get => precioPorNoche; set => precioPorNoche = value; }
+        public int IdHabitacion { get => idHabitacion; set => idHabitacion = value; }
+        public string Tipo { get => tipo; set => tipo = value; }  
+        public int PrecioPorNoche { get => precioPorNoche; set => precioPorNoche = value; }
         public string Estado { get => estado; set => estado = value; }
+      
+
+
         /// Constructor vacío. Permite crear un objeto sin valores iniciales:
-        public Habitaciones() { }
+        public Habitacion() { }
         /// Constructor que permite crear una habitación con todos sus datos completos:
-        public Habitaciones(int habitaciones,string tipo, double precioPorNoche, string estado)
+        public Habitacion(int idHabitacion,string tipo, int precioPorNoche, string estado)
         {
-            Habitacion = habitaciones;
+
+            IdHabitacion = idHabitacion;
             Tipo = tipo;
             PrecioPorNoche = precioPorNoche;
             Estado = estado;
