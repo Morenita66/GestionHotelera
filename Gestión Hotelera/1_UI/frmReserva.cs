@@ -14,7 +14,7 @@ namespace _1_UI
 {
     public partial class frmReserva : Form
     {
-        private readonly ConexionReserva conexion; 
+        private readonly ConexionReserva conexion;
 
         public frmReserva()
         {
@@ -135,6 +135,8 @@ namespace _1_UI
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
             {
                 var fila = dgvReservas.Rows[e.RowIndex];
+
+                // Cargar los datos en los controles CORRECTOS de frmReserva
                 txtNombreCliente.Text = fila.Cells["NombreCliente"].Value?.ToString() ?? "";
                 txtRecepcionista.Text = fila.Cells["NombreRecepcionista"].Value?.ToString() ?? "";
                 txtTotal.Text = fila.Cells["PrecioTotal"].Value?.ToString() ?? "";

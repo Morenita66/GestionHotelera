@@ -7,15 +7,21 @@ namespace _3_DAL
 {
     public class ConexionReserva
     {
-     public const string Cadena = "data source=(localdb)\\MSSQLLocalDB; initial catalog=HotelDB; integrated security=sspi;";
-
+        public const string Cadena = "Server=SANTI;Initial Catalog=HotelDB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True;";
 
         public List<Reserva> Leer()
         {
             var listaReservas = new List<Reserva>();
 
             using (var conexion = new SqlConnection(Cadena))
-            using (var comando = new SqlCommand(@"SELECT r.idReserva, r.idCliente, r.idRecepcionista, r.precioTotal, r.estado,c.nombre + ' ' + c.apellido as nombreCliente, rec.nombre + ' ' + rec.apellido as nombreRecepcionista FROM Reserva r INNER JOIN Cliente c ON r.idCliente = c.idCliente INNER JOIN Recepcionista rec ON r.idRecepcionista = rec.idRecepcionista", conexion))
+            using (var comando = new SqlCommand(@"
+        SELECT r.idReserva, r.idCliente, r.idRecepcionista, r.precioTotal, r.estado,
+               c.nombre + ' ' + c.apellido as nombreCliente, 
+               rec.nombre + ' ' + rec.apellido as nombreRecepcionista,
+               r.idRecepcionista as idRecepcionistaReal  
+        FROM Reserva r 
+        INNER JOIN Cliente c ON r.idCliente = c.idCliente 
+        INNER JOIN Recepcionista rec ON r.idRecepcionista = rec.idRecepcionista", conexion))
             {
                 comando.CommandType = CommandType.Text;
                 conexion.Open();
@@ -45,7 +51,8 @@ namespace _3_DAL
         {
             using (var conexion = new SqlConnection(Cadena))
             using (var comando = new SqlCommand(
-                @"INSERT INTO Reserva (idCliente, idRecepcionista, precioTotal, estado) VALUES (@idCliente, @idRecepcionista, @precioTotal, @estado)", conexion))
+                @"INSERT INTO Reserva (idCliente, idRecepcionista, precioTotal, estado) 
+                  VALUES (@idCliente, @idRecepcionista, @precioTotal, @estado)", conexion))
             {
                 comando.CommandType = CommandType.Text;
 
@@ -64,11 +71,11 @@ namespace _3_DAL
             using (var conexion = new SqlConnection(Cadena))
             using (var comando = new SqlCommand(
                 @"UPDATE Reserva
-              SET idCliente = @idCliente,
-                  idRecepcionista = @idRecepcionista,
-                  precioTotal = @precioTotal,
-                  estado = @estado
-              WHERE idReserva = @idReserva", conexion))
+                  SET idCliente = @idCliente,
+                      idRecepcionista = @idRecepcionista,
+                      precioTotal = @precioTotal,
+                      estado = @estado
+                  WHERE idReserva = @idReserva", conexion))
             {
                 comando.CommandType = CommandType.Text;
 
