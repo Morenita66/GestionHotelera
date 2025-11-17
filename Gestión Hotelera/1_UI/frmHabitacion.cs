@@ -51,19 +51,19 @@ namespace _1_UI
         }
 
         // Buscar habitación
-        private void btnBuscar_Click(object sender, EventArgs e)
+        private void btnBuscar_Click_1(object sender, EventArgs e)
         {
-
              try
              {
 
                 ConexionHabitacion conexionBuscar = new ConexionHabitacion();
+                int id = Convert.ToInt32(txtBuscar.Text);
 
-                dgvHabitacion.DataSource = conexionBuscar.Buscar (txtBuscar.Text);
+                dgvHabitacion.DataSource = conexionBuscar.Buscar (id);
 
-                dgvHabitacion.Columns["idHabitacion"].DisplayIndex = 0;
-                dgvHabitacion.Columns["tipo"].DisplayIndex = 1;
-                dgvHabitacion.Columns["precioPorNoche"].DisplayIndex = 2;
+                dgvHabitacion.Columns["IdHabitacion"].DisplayIndex = 0;
+                dgvHabitacion.Columns["Tipo"].DisplayIndex = 1;
+                dgvHabitacion.Columns["PrecioPorNoche"].DisplayIndex = 2;
                 dgvHabitacion.Columns["Estado"].DisplayIndex = 3;
              }
 
@@ -72,30 +72,32 @@ namespace _1_UI
                     MessageBox.Show("Error al buscar", "Error");
                     MessageBox.Show(ex.Message);
              }
+
         }
 
+
         // Eliminar habitación
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void btnEliminar_Click_1(object sender, EventArgs e)
         {
 
-            if (dgvHabitacion.SelectedRows.Count > 0)
+
+
+            Habitacion borrar = new Habitacion(); //vamos a crear un objeto auxiliar de cliente
+
+            // Obtenemos el ID desde la grilla (¡importante: nombre de columna exacto!)
+            borrar.IdHabitacion = (int)dgvHabitacion.CurrentRow.Cells["idHabitacion"].Value; //esta es la forma en la que vamos a obtener el id 
+
+            if
+                (MessageBox.Show("¿Desea eliminar esta habitacion?", "Confirmación",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) //aca confirmamos si desea eliminar al cliente
             {
-                int id = Convert.ToInt32(dgvHabitacion.SelectedRows[0].Cells["Id"].Value);
 
-                Habitacion eliminarDocente = new Habitacion();
-                eliminarDocente.IdHabitacion = id;
+                ConexionHabitacion conexion = new ConexionHabitacion(); //aca vamos a llamar al metodo eliminar que creamos 
+                conexion.Eliminar(borrar);
 
-                ConexionHabitacion conexion = new ConexionHabitacion();
-                conexion.Eliminar(eliminarDocente);
 
-                CargarHabitacion();
-                LimpiarCampos();
-
-                MessageBox.Show("Docente eliminado correctamente");
-            }
-            else
-            {
-                MessageBox.Show("Seleccione una fila para eliminar");
+                MessageBox.Show("Cliente eliminado correctamente"); //aca vamos a mostrar el mensaje que indica que ya se elimino 
+                CargarHabitacion(); // este metodo vuelve a cargar al cliente ahora con el eliminado
             }
         }
         private void LimpiarCampos()
@@ -119,32 +121,40 @@ namespace _1_UI
             form.ShowDialog();*/
         }
 
-        // Volver al menu 
-        private void btnVolver_Click(object sender, EventArgs e)
-        {
-            frmMenu menu = new frmMenu();
-            menu.Show();
-            this.Hide();
-        }
+      
 
         private void frmHabitaciones_Load(object sender, EventArgs e)
         {
-
+            CargarHabitacion();
         }
 
         private void grbBusqueda_Enter(object sender, EventArgs e)
         {
 
         }
+        // Volver al menu 
+        private void btnVolver_Click_1(object sender, EventArgs e)
+        {
+            frmMenu menu = new frmMenu();
+            menu.Show();
+            this.Hide();
+        }
 
-        private void btnEliminar_Click_1(object sender, EventArgs e)
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void btnVolver_Click_1(object sender, EventArgs e)
+        private void pnlDatos_Paint(object sender, PaintEventArgs e)
         {
+                
+        }
 
+        private void btnNuevo_Click_1(object sender, EventArgs e)
+        {
+            frmRegistrarHabitacion datos = new frmRegistrarHabitacion();
+            datos.Show();
+            this.Hide();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using _4_MODEL;
+﻿using _3_DAL;
+using _4_MODEL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,7 @@ namespace _1_UI
         public frmModificarHabitacion()
         {
             InitializeComponent();
+       
         }
 
         private void lblRegistrarHabitacion_Click(object sender, EventArgs e)
@@ -29,15 +31,49 @@ namespace _1_UI
         }
         private void cargar()
         {
+            /*
+            ConexionHabitacion conexion = new ConexionHabitacion();
 
-        //    ConexionHabitacionHabitacion conexion = new ConexionHabitacion();
+            txtHabitacion.Text = Convert.ToString(Habitacion.IdHabitacion);
+            txtTipo.Text = Habitacion.Tipo;
+            txtPrecioPorNoche.Text = Convert.ToString(Habitacion.PrecioPorNoche);
+            txtEstado.Text = Habitacion.Estado;*/
 
-        //    txtNombre.Text = docente.Nombre;
-        //    txtEdad.Text = Convert.ToString(docente.Edad);
-        //    txtPuesto.Text = docente.Puesto;
-        //    txtAntiguedad.Text = Convert.ToString(docente.Antiguedad);
-        //    txtSalario.Text = Convert.ToString(docente.Salario);
+        }
+        
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {/*
+            Habitacion aux = objetoAuxiliar();
+            Habitacion conexion = new Conexion();
+            frmHabitacion menuHabitacion = new frmHabitacion();
 
+            conexion.Modificar(aux);
+
+            MessageBox.Show("Se modificó el docente", "Confirmación");
+            this.Close();
+            menuHabitacion.Show();
+        }
+        private Habitacion objetoAuxiliar()
+        {
+
+            Habitacion aux = new Habitacion();
+            aux.Id = Habitacion.Id;
+            aux.Nombre = txtNombre.Text;
+            aux.Edad = int.Parse(txtEdad.Text);
+            aux.Puesto = txtPuesto.Text;
+            aux.Antiguedad = int.Parse(txtAntiguedad.Text);
+            aux.Salario = int.Parse(txtSalario.Text);
+
+            return aux;*/
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
 
         }
     }

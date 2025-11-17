@@ -72,7 +72,7 @@
             this.grbBusqueda.Size = new System.Drawing.Size(200, 346);
             this.grbBusqueda.TabIndex = 5;
             this.grbBusqueda.TabStop = false;
-            this.grbBusqueda.Text = "Búsqueda por nombre";
+            this.grbBusqueda.Text = "Búsqueda por id";
             this.grbBusqueda.Enter += new System.EventHandler(this.grbBusqueda_Enter);
             // 
             // txtBuscar
@@ -82,6 +82,7 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(172, 27);
             this.txtBuscar.TabIndex = 0;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // btnEliminar
             // 
@@ -109,6 +110,7 @@
             this.btnBuscar.TabIndex = 1;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
             // 
             // pnlDatos
             // 
@@ -119,6 +121,7 @@
             this.pnlDatos.Name = "pnlDatos";
             this.pnlDatos.Size = new System.Drawing.Size(867, 369);
             this.pnlDatos.TabIndex = 4;
+            this.pnlDatos.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlDatos_Paint);
             // 
             // dgvHabitacion
             // 
@@ -152,6 +155,7 @@
             this.btnNuevo.TabIndex = 9;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click_1);
             // 
             // btnModificar
             // 
