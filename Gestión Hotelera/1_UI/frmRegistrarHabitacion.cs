@@ -35,7 +35,7 @@ namespace _1_UI
             Habitacion aux = new Habitacion();
             aux.IdHabitacion= int.Parse(txtHabitacion.Text);
             aux.Tipo = txtTipo.Text;
-            aux.PrecioPorNoche = int.Parse(txtPrecioPorNoche.Text);
+            aux.PrecioPorNoche = decimal.Parse(txtPrecioPorNoche.Text);
             aux.Estado = txtEstado.Text;
 
             return aux;

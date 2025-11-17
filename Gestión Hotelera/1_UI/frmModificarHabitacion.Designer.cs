@@ -35,7 +35,7 @@
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.grbPrecio = new System.Windows.Forms.GroupBox();
-            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.txtPrecioPorNoche = new System.Windows.Forms.TextBox();
             this.lblPrecio = new System.Windows.Forms.Label();
             this.grbTipo = new System.Windows.Forms.GroupBox();
             this.txtTipo = new System.Windows.Forms.TextBox();
@@ -73,6 +73,7 @@
             this.btnCancelar.TabIndex = 27;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGuardar
             // 
@@ -99,6 +100,7 @@
             this.groupBox4.TabIndex = 25;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Estado";
+            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
             // txtEstado
             // 
@@ -120,7 +122,7 @@
             // 
             // grbPrecio
             // 
-            this.grbPrecio.Controls.Add(this.txtPrecio);
+            this.grbPrecio.Controls.Add(this.txtPrecioPorNoche);
             this.grbPrecio.Controls.Add(this.lblPrecio);
             this.grbPrecio.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.grbPrecio.Location = new System.Drawing.Point(45, 283);
@@ -132,13 +134,13 @@
             this.grbPrecio.TabStop = false;
             this.grbPrecio.Text = "Precio por noche";
             // 
-            // txtPrecio
+            // txtPrecioPorNoche
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(122, 29);
-            this.txtPrecio.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(274, 27);
-            this.txtPrecio.TabIndex = 1;
+            this.txtPrecioPorNoche.Location = new System.Drawing.Point(122, 29);
+            this.txtPrecioPorNoche.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtPrecioPorNoche.Name = "txtPrecioPorNoche";
+            this.txtPrecioPorNoche.Size = new System.Drawing.Size(274, 27);
+            this.txtPrecioPorNoche.TabIndex = 1;
             // 
             // lblPrecio
             // 
@@ -252,7 +254,7 @@
         private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox grbPrecio;
-        private System.Windows.Forms.TextBox txtPrecio;
+        private System.Windows.Forms.TextBox txtPrecioPorNoche;
         private System.Windows.Forms.Label lblPrecio;
         private System.Windows.Forms.GroupBox grbTipo;
         private System.Windows.Forms.TextBox txtTipo;

@@ -11,7 +11,7 @@ namespace _3_DAL
 {
     public class ConexionHabitacion
     {
-        SqlConnection conexionHabitacion = new SqlConnection();
+        SqlConnection conexion = new SqlConnection();
         SqlCommand comando = new SqlCommand();
 
         // Leemos todas
@@ -22,11 +22,11 @@ namespace _3_DAL
 
             SqlDataReader lector;
 
-            conexionHabitacion.ConnectionString = "data source=(localdb)\\MSSQLLocalDB; initial catalog=HotelDB; integrated security=sspi;";
+            conexion.ConnectionString = "data source=(localdb)\\MSSQLLocalDB; initial catalog=HotelDB; integrated security=sspi;";
             comando.CommandType = System.Data.CommandType.Text;
             comando.CommandText = "select * from Habitacion";
-            comando.Connection = conexionHabitacion;
-            conexionHabitacion.Open();
+            comando.Connection = conexion;
+            conexion.Open();
 
             lector = comando.ExecuteReader();
             while (lector.Read())
@@ -34,50 +34,51 @@ namespace _3_DAL
                 Habitacion aux = new Habitacion();
                 aux.IdHabitacion= lector.GetInt32(0);
                 aux.Tipo = lector.GetString(1);
-                aux.PrecioPorNoche= lector.GetInt32(2);
+                aux.PrecioPorNoche= lector.GetDecimal(2);
                 aux.Estado = lector.GetString(3);
 
                 listaHabitacion.Add(aux);
 
             }
-            conexionHabitacion.Close();
+            conexion.Close();
             return listaHabitacion;
         }
         
         public void Agregar(Habitacion nuevo)
         {
 
-            conexionHabitacion.ConnectionString = "data source=(localdb)\\MSSQLLocalDB; initial catalog=HotelDB; integrated security=sspi;";
+            conexion.ConnectionString = "data source=(localdb)\\MSSQLLocalDB; initial catalog=HotelDB; integrated security=sspi;";
             comando.CommandType = System.Data.CommandType.Text;
 
-            comando.CommandText = "insert into Habitacion values (@idHabitacion,@tipo,@precioPorNoche,@estado)";
+            comando.CommandText = "INSERT INTO Habitacion (tipo,precioPorNoche,estado) values (@tipo,@precioPorNoche,@estado)";
 
-            comando.Parameters.AddWithValue("@idHabitacion", nuevo.IdHabitacion);
             comando.Parameters.AddWithValue("@tipo", nuevo.Tipo);
             comando.Parameters.AddWithValue("@precioPorNoche", nuevo.PrecioPorNoche);
             comando.Parameters.AddWithValue("@estado", nuevo.Estado);
 
-            comando.Connection = conexionHabitacion;
+            comando.Connection = conexion;
 
-            conexionHabitacion.Open();
+            conexion.Open();
             comando.ExecuteNonQuery();
-
             comando.Parameters.Clear();
-            conexionHabitacion.Close();
-
-
+            conexion.Close();
         }
 
-        public List<Habitacion> Buscar(string busca)
+        public List<Habitacion> Buscar(int busca)
         {
             List<Habitacion> listaHabitacion = new List<Habitacion>();
 
-            conexionHabitacion.ConnectionString = "data source=(localdb)\\MSSQLLocalDB; initial catalog=HotelDB; integrated security=sspi;";
+            conexion.ConnectionString = "data source=(localdb)\\MSSQLLocalDB; initial catalog=HotelDB; integrated security=sspi;";
             comando.CommandType = System.Data.CommandType.Text;
 
-            comando.CommandText = "select * from Habitacion Where nombre like'" + busca + "'";
-            comando.Connection = conexionHabitacion;
-            conexionHabitacion.Open();
+            comando.CommandText = "select * from Habitacion Where idHabitacion =" + busca + "";
+        
+
+            comando.Parameters.AddWithValue("@id",busca);
+
+            comando.Connection = conexion;
+
+            conexion.Open();
 
             SqlDataReader lector = comando.ExecuteReader();
             while (lector.Read())
@@ -85,19 +86,18 @@ namespace _3_DAL
                 Habitacion aux = new Habitacion();
                 aux.IdHabitacion = lector.GetInt32(0);
                 aux.Tipo = lector.GetString(1);
-                aux.PrecioPorNoche = lector.GetInt32(2);
+                aux.PrecioPorNoche = lector.GetDecimal(2);
                 aux.Estado = lector.GetString(3);
 
                 listaHabitacion.Add(aux);
-
             }
-            conexionHabitacion.Close();
+            conexion.Close();
             return listaHabitacion;
         }
         public void Modificar(Habitacion habitacionModificar)
         {
 
-            conexionHabitacion.ConnectionString = "data source=(localdb)\\MSSQLLocalDB; initial catalog=HotelDB; integrated security=sspi;";
+            conexion.ConnectionString = "data source=(localdb)\\MSSQLLocalDB; initial catalog=HotelDB; integrated security=sspi;";
             comando.CommandType = System.Data.CommandType.Text;
             comando.CommandText = "update Habitacion set IdHabitacion=@idHabitacion,Tipo=@tipo,PrecioPorNoche=@precioPorNoche,Estado=@estado Where Id=" + habitacionModificar.IdHabitacion;
             comando.Parameters.AddWithValue("@idHabitacion", habitacionModificar.IdHabitacion);
@@ -106,30 +106,28 @@ namespace _3_DAL
             comando.Parameters.AddWithValue("@estado", habitacionModificar.Estado);
 
 
-            comando.Connection = conexionHabitacion;
+            comando.Connection = conexion;
 
-            conexionHabitacion.Open();
+            conexion.Open();
             comando.ExecuteNonQuery();
 
             comando.Parameters.Clear();
-            conexionHabitacion.Close();
+            conexion.Close();
 
         }
 
         public void Eliminar(Habitacion eliminar)
         {
 
-            conexionHabitacion.ConnectionString = "data source=(localdb)\\MSSQLLocalDB; initial catalog=HotelDB; integrated security=sspi;";
+            conexion.ConnectionString = "server=(localdb)\\MSSQLLocalDB; initial catalog=HotelDB; integrated security=sspi;";
             comando.CommandType = System.Data.CommandType.Text;
-            comando.CommandText = "delete from Habitacion where idHabitacion=@idHabitacion";
-            comando.Parameters.AddWithValue("@idHabitacion", eliminar.IdHabitacion);
+            comando.CommandText = "DELETE FROM Habitacion WHERE idHabitacion = " + eliminar.IdHabitacion;
+            comando.Connection = conexion;
 
-            comando.Connection = conexionHabitacion;
-
-            conexionHabitacion.Open();
+            conexion.Open();
             comando.ExecuteNonQuery();
-            comando.Parameters.Clear();
-            conexionHabitacion.Close();
+            conexion.Close();
+
         }
     }
 }
