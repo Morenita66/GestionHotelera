@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIngreso));
             this.lbAcceso = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -46,9 +45,10 @@
             this.lbAcceso.BackColor = System.Drawing.Color.YellowGreen;
             this.lbAcceso.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAcceso.ForeColor = System.Drawing.Color.White;
-            this.lbAcceso.Location = new System.Drawing.Point(147, 57);
+            this.lbAcceso.Location = new System.Drawing.Point(101, 87);
+            this.lbAcceso.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbAcceso.Name = "lbAcceso";
-            this.lbAcceso.Size = new System.Drawing.Size(246, 41);
+            this.lbAcceso.Size = new System.Drawing.Size(202, 32);
             this.lbAcceso.TabIndex = 0;
             this.lbAcceso.Text = "Acceso Principal";
             // 
@@ -57,12 +57,10 @@
             this.btnAceptar.BackColor = System.Drawing.Color.ForestGreen;
             this.btnAceptar.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.Color.White;
-            this.btnAceptar.Location = new System.Drawing.Point(304, 303);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAceptar.Location = new System.Drawing.Point(228, 246);
+            this.btnAceptar.Location = new System.Drawing.Point(228, 255);
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(112, 50);
+            this.btnAceptar.Size = new System.Drawing.Size(84, 41);
             this.btnAceptar.TabIndex = 1;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = false;
@@ -73,12 +71,10 @@
             this.btnCancelar.BackColor = System.Drawing.Color.ForestGreen;
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(59, 303);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCancelar.Location = new System.Drawing.Point(44, 246);
+            this.btnCancelar.Location = new System.Drawing.Point(67, 255);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(111, 50);
+            this.btnCancelar.Size = new System.Drawing.Size(83, 41);
             this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -86,23 +82,19 @@
             // 
             // txtClave
             // 
-            this.txtClave.Location = new System.Drawing.Point(169, 218);
-            this.txtClave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtClave.Location = new System.Drawing.Point(127, 177);
+            this.txtClave.Location = new System.Drawing.Point(126, 199);
             this.txtClave.Margin = new System.Windows.Forms.Padding(2);
             this.txtClave.Name = "txtClave";
             this.txtClave.PasswordChar = '*';
-            this.txtClave.Size = new System.Drawing.Size(200, 22);
+            this.txtClave.Size = new System.Drawing.Size(151, 20);
             this.txtClave.TabIndex = 3;
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(169, 171);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtUsuario.Location = new System.Drawing.Point(127, 139);
+            this.txtUsuario.Location = new System.Drawing.Point(126, 168);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(200, 22);
+            this.txtUsuario.Size = new System.Drawing.Size(151, 20);
             this.txtUsuario.TabIndex = 5;
             // 
             // lblContraseña
@@ -111,9 +103,10 @@
             this.lblContraseña.BackColor = System.Drawing.Color.Transparent;
             this.lblContraseña.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContraseña.ForeColor = System.Drawing.Color.Black;
-            this.lblContraseña.Location = new System.Drawing.Point(53, 215);
+            this.lblContraseña.Location = new System.Drawing.Point(39, 197);
+            this.lblContraseña.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblContraseña.Name = "lblContraseña";
-            this.lblContraseña.Size = new System.Drawing.Size(101, 25);
+            this.lblContraseña.Size = new System.Drawing.Size(83, 20);
             this.lblContraseña.TabIndex = 6;
             this.lblContraseña.Text = "Contraseña";
             // 
@@ -123,21 +116,20 @@
             this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
             this.lblUsuario.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.Color.Black;
-            this.lblUsuario.Location = new System.Drawing.Point(53, 171);
+            this.lblUsuario.Location = new System.Drawing.Point(39, 168);
+            this.lblUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(72, 25);
+            this.lblUsuario.Size = new System.Drawing.Size(59, 20);
             this.lblUsuario.TabIndex = 7;
             this.lblUsuario.Text = "Usuario";
             // 
             // pbimagen
             // 
-            this.pbimagen.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pbimagen.ErrorImage")));
             this.pbimagen.Image = global::_1_UI.Properties.Resources.ojo;
-            this.pbimagen.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbimagen.InitialImage")));
-            this.pbimagen.Location = new System.Drawing.Point(375, 218);
-            this.pbimagen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbimagen.Location = new System.Drawing.Point(281, 199);
+            this.pbimagen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbimagen.Name = "pbimagen";
-            this.pbimagen.Size = new System.Drawing.Size(29, 22);
+            this.pbimagen.Size = new System.Drawing.Size(22, 18);
             this.pbimagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbimagen.TabIndex = 4;
             this.pbimagen.TabStop = false;
@@ -145,10 +137,10 @@
             // 
             // frmIngreso
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.ClientSize = new System.Drawing.Size(537, 441);
+            this.ClientSize = new System.Drawing.Size(403, 358);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.lblContraseña);
             this.Controls.Add(this.txtUsuario);
@@ -158,7 +150,6 @@
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.lbAcceso);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmIngreso";
             this.Text = "Ingreso";

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _4_MODEL
 {
-    internal class Cliente
+    public class Cliente
     {
         //Ponemos los atributos que va a tener nuestro cliente
         private int _idCliente;
@@ -39,6 +39,10 @@ namespace _4_MODEL
             _dni=dni;
             Edad=edad;
 
+        }
+        public override string ToString()
+        {
+            return $"{Nombre} {Apellido} - DNI: {Dni}";
         }
     }
 }
