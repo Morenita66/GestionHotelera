@@ -63,5 +63,9 @@ namespace _1_UI
             }
         }
 
+        private void frmIngreso_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

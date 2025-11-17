@@ -57,8 +57,9 @@
             this.pnlDatos.BackColor = System.Drawing.Color.Beige;
             this.pnlDatos.Controls.Add(this.dgvReservas);
             this.pnlDatos.Location = new System.Drawing.Point(0, 0);
+            this.pnlDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlDatos.Name = "pnlDatos";
-            this.pnlDatos.Size = new System.Drawing.Size(650, 300);
+            this.pnlDatos.Size = new System.Drawing.Size(867, 369);
             this.pnlDatos.TabIndex = 0;
             // 
             // dgvReservas
@@ -71,14 +72,17 @@
             this.dgvReservas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvReservas.BackgroundColor = System.Drawing.Color.Silver;
             this.dgvReservas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReservas.Location = new System.Drawing.Point(10, 10);
+            this.dgvReservas.Location = new System.Drawing.Point(13, 12);
+            this.dgvReservas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvReservas.MultiSelect = false;
             this.dgvReservas.Name = "dgvReservas";
             this.dgvReservas.ReadOnly = true;
+            this.dgvReservas.RowHeadersWidth = 51;
             this.dgvReservas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvReservas.Size = new System.Drawing.Size(630, 280);
+            this.dgvReservas.Size = new System.Drawing.Size(840, 345);
             this.dgvReservas.TabIndex = 0;
             this.dgvReservas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReservas_CellClick);
+            this.dgvReservas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReservas_CellContentClick);
             // 
             // grbBusqueda
             // 
@@ -87,18 +91,22 @@
             this.grbBusqueda.Controls.Add(this.btnEliminar);
             this.grbBusqueda.Controls.Add(this.btnBuscar);
             this.grbBusqueda.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.grbBusqueda.Location = new System.Drawing.Point(650, 0);
+            this.grbBusqueda.Location = new System.Drawing.Point(867, 0);
+            this.grbBusqueda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grbBusqueda.Name = "grbBusqueda";
-            this.grbBusqueda.Size = new System.Drawing.Size(150, 300);
+            this.grbBusqueda.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbBusqueda.Size = new System.Drawing.Size(200, 369);
             this.grbBusqueda.TabIndex = 1;
             this.grbBusqueda.TabStop = false;
             this.grbBusqueda.Text = "Búsqueda por nombre";
+            this.grbBusqueda.Enter += new System.EventHandler(this.grbBusqueda_Enter);
             // 
             // textBoxBusqueda
             // 
-            this.textBoxBusqueda.Location = new System.Drawing.Point(10, 30);
+            this.textBoxBusqueda.Location = new System.Drawing.Point(13, 37);
+            this.textBoxBusqueda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxBusqueda.Name = "textBoxBusqueda";
-            this.textBoxBusqueda.Size = new System.Drawing.Size(130, 23);
+            this.textBoxBusqueda.Size = new System.Drawing.Size(172, 27);
             this.textBoxBusqueda.TabIndex = 0;
             // 
             // btnEliminar
@@ -106,9 +114,10 @@
             this.btnEliminar.BackColor = System.Drawing.Color.ForestGreen;
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnEliminar.Location = new System.Drawing.Point(10, 93);
+            this.btnEliminar.Location = new System.Drawing.Point(13, 114);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(130, 28);
+            this.btnEliminar.Size = new System.Drawing.Size(173, 34);
             this.btnEliminar.TabIndex = 2;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -119,9 +128,10 @@
             this.btnBuscar.BackColor = System.Drawing.Color.ForestGreen;
             this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnBuscar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBuscar.Location = new System.Drawing.Point(10, 59);
+            this.btnBuscar.Location = new System.Drawing.Point(13, 73);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(130, 28);
+            this.btnBuscar.Size = new System.Drawing.Size(173, 34);
             this.btnBuscar.TabIndex = 1;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -141,74 +151,85 @@
             this.grbDatos.Controls.Add(this.btnModificar);
             this.grbDatos.Controls.Add(this.btnNuevo);
             this.grbDatos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.grbDatos.Location = new System.Drawing.Point(0, 300);
+            this.grbDatos.Location = new System.Drawing.Point(0, 369);
+            this.grbDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grbDatos.Name = "grbDatos";
-            this.grbDatos.Size = new System.Drawing.Size(650, 150);
+            this.grbDatos.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbDatos.Size = new System.Drawing.Size(867, 185);
             this.grbDatos.TabIndex = 2;
             this.grbDatos.TabStop = false;
             this.grbDatos.Text = "DATOS";
+            this.grbDatos.Enter += new System.EventHandler(this.grbDatos_Enter);
             // 
             // txtNombreCliente
             // 
-            this.txtNombreCliente.Location = new System.Drawing.Point(10, 30);
+            this.txtNombreCliente.Location = new System.Drawing.Point(13, 37);
+            this.txtNombreCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombreCliente.Name = "txtNombreCliente";
-            this.txtNombreCliente.Size = new System.Drawing.Size(130, 23);
+            this.txtNombreCliente.Size = new System.Drawing.Size(172, 27);
             this.txtNombreCliente.TabIndex = 0;
             // 
             // txtRecepcionista
             // 
-            this.txtRecepcionista.Location = new System.Drawing.Point(150, 30);
+            this.txtRecepcionista.Location = new System.Drawing.Point(200, 37);
+            this.txtRecepcionista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtRecepcionista.Name = "txtRecepcionista";
-            this.txtRecepcionista.Size = new System.Drawing.Size(130, 23);
+            this.txtRecepcionista.Size = new System.Drawing.Size(172, 27);
             this.txtRecepcionista.TabIndex = 1;
             // 
             // txtTotal
             // 
-            this.txtTotal.Location = new System.Drawing.Point(290, 30);
+            this.txtTotal.Location = new System.Drawing.Point(387, 37);
+            this.txtTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(130, 23);
+            this.txtTotal.Size = new System.Drawing.Size(172, 27);
             this.txtTotal.TabIndex = 2;
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(430, 30);
+            this.txtEstado.Location = new System.Drawing.Point(573, 37);
+            this.txtEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(130, 23);
+            this.txtEstado.Size = new System.Drawing.Size(172, 27);
             this.txtEstado.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 15);
+            this.label1.Location = new System.Drawing.Point(9, 18);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 15);
+            this.label1.Size = new System.Drawing.Size(61, 20);
             this.label1.TabIndex = 4;
             this.label1.Text = "Cliente:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(147, 15);
+            this.label2.Location = new System.Drawing.Point(196, 18);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 15);
+            this.label2.Size = new System.Drawing.Size(109, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = "Recepcionista:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(287, 15);
+            this.label3.Location = new System.Drawing.Point(383, 18);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 15);
+            this.label3.Size = new System.Drawing.Size(48, 20);
             this.label3.TabIndex = 6;
             this.label3.Text = "Total:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(427, 15);
+            this.label4.Location = new System.Drawing.Point(569, 18);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 15);
+            this.label4.Size = new System.Drawing.Size(60, 20);
             this.label4.TabIndex = 7;
             this.label4.Text = "Estado:";
             // 
@@ -217,9 +238,10 @@
             this.btnModificar.BackColor = System.Drawing.Color.ForestGreen;
             this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnModificar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnModificar.Location = new System.Drawing.Point(10, 70);
+            this.btnModificar.Location = new System.Drawing.Point(13, 86);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(104, 32);
+            this.btnModificar.Size = new System.Drawing.Size(139, 39);
             this.btnModificar.TabIndex = 8;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
@@ -230,9 +252,10 @@
             this.btnNuevo.BackColor = System.Drawing.Color.ForestGreen;
             this.btnNuevo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnNuevo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNuevo.Location = new System.Drawing.Point(120, 70);
+            this.btnNuevo.Location = new System.Drawing.Point(160, 86);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(100, 32);
+            this.btnNuevo.Size = new System.Drawing.Size(133, 39);
             this.btnNuevo.TabIndex = 9;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = false;
@@ -243,9 +266,10 @@
             this.btnVolver.BackColor = System.Drawing.Color.ForestGreen;
             this.btnVolver.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnVolver.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnVolver.Location = new System.Drawing.Point(650, 322);
+            this.btnVolver.Location = new System.Drawing.Point(867, 396);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(150, 101);
+            this.btnVolver.Size = new System.Drawing.Size(200, 124);
             this.btnVolver.TabIndex = 3;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = false;
@@ -253,15 +277,16 @@
             // 
             // frmReserva
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.grbDatos);
             this.Controls.Add(this.grbBusqueda);
             this.Controls.Add(this.pnlDatos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmReserva";
             this.Text = "Gestión de Reservas";
             this.pnlDatos.ResumeLayout(false);

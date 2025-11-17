@@ -44,10 +44,16 @@ namespace _1_UI
 
         private void btnHabitación_Click(object sender, EventArgs e)
         {
-
+            frmHabitacion frmHabitaciones = new frmHabitacion();
+            frmHabitaciones.ShowDialog();
         }
 
         private void pnEstudiante_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnOpciones_Click(object sender, EventArgs e)
         {
 
         }

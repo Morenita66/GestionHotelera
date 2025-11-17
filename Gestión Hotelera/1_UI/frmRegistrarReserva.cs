@@ -109,5 +109,10 @@ namespace _1_UI
         {
 
         }
+
+        private void txtCliente_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

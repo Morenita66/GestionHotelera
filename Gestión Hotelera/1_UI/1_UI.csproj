@@ -52,6 +52,12 @@
     <Compile Include="FrmCliente.Designer.cs">
       <DependentUpon>FrmCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmHabitacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHabitacion.Designer.cs">
+      <DependentUpon>frmHabitacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmIngreso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,11 +70,17 @@
     <Compile Include="frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRegistrarHabitaciones.cs">
+    <Compile Include="frmModificarHabitacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRegistrarHabitaciones.Designer.cs">
-      <DependentUpon>frmRegistrarHabitaciones.cs</DependentUpon>
+    <Compile Include="frmModificarHabitacion.Designer.cs">
+      <DependentUpon>frmModificarHabitacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistrarHabitacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistrarHabitacion.Designer.cs">
+      <DependentUpon>frmRegistrarHabitacion.cs</DependentUpon>
     </Compile>
     <Compile Include="frmRegistrarReserva.cs">
       <SubType>Form</SubType>
@@ -87,14 +99,20 @@
     <EmbeddedResource Include="FrmCliente.resx">
       <DependentUpon>FrmCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmHabitacion.resx">
+      <DependentUpon>frmHabitacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmIngreso.resx">
       <DependentUpon>frmIngreso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRegistrarHabitaciones.resx">
-      <DependentUpon>frmRegistrarHabitaciones.cs</DependentUpon>
+    <EmbeddedResource Include="frmModificarHabitacion.resx">
+      <DependentUpon>frmModificarHabitacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistrarHabitacion.resx">
+      <DependentUpon>frmRegistrarHabitacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegistrarReserva.resx">
       <DependentUpon>frmRegistrarReserva.cs</DependentUpon>
