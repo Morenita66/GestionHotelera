@@ -125,38 +125,29 @@ namespace _1_UI
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            frmMenu menu = new frmMenu();
-            menu.Show();
-            this.Hide();
+            frmMenu menuu = new frmMenu();
+            menuu.Show();
+            this.Hide(); 
         }
 
         private void dgvReservas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
-            {
-                var fila = dgvReservas.Rows[e.RowIndex];
-
-                // Cargar los datos en los controles CORRECTOS de frmReserva
-               /* txtNombreCliente.Text = fila.Cells["NombreCliente"].Value?.ToString() ?? "";
-                txtRecepcionista.Text = fila.Cells["NombreRecepcionista"].Value?.ToString() ?? "";
-                txtTotal.Text = fila.Cells["PrecioTotal"].Value?.ToString() ?? "";
-                txtEstado.Text = fila.Cells["Estado"].Value?.ToString() ?? "";*/
-            }
+            // Este método está vacío en tu código original. Puedes dejarlo así o implementar lógica si lo necesitas.
         }
 
         private void dgvReservas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            // Vacío
         }
 
         private void grbBusqueda_Enter(object sender, EventArgs e)
         {
-
+            // Vacío
         }
 
         private void grbDatos_Enter(object sender, EventArgs e)
         {
-
+            // Vacío
         }
     }
 }

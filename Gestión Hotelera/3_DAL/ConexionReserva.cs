@@ -1,4 +1,5 @@
 ﻿using _4_MODEL;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -7,40 +8,46 @@ namespace _3_DAL
 {
     public class ConexionReserva
     {
-        public const string Cadena = "server=(localdb)\\MSSQLLocalDB; initial catalog=HotelDB; integrated security=sspi;";
+        // Usar la cadena de configuración
+        public string Cadena => Configuracion.Cadena;
+
+        public SqlConnection GetConnection()
+        {
+            return new SqlConnection(Cadena);
+        }
 
         public List<Reserva> Leer()
         {
             var listaReservas = new List<Reserva>();
 
-            using (var conexion = new SqlConnection(Cadena))
-            using (var comando = new SqlCommand(@"
-        SELECT r.idReserva, r.idCliente, r.idRecepcionista, r.precioTotal, r.estado,
-               c.nombre + ' ' + c.apellido as nombreCliente, 
-               rec.nombre + ' ' + rec.apellido as nombreRecepcionista,
-               r.idRecepcionista as idRecepcionistaReal  
-        FROM Reserva r 
-        INNER JOIN Cliente c ON r.idCliente = c.idCliente 
-        INNER JOIN Recepcionista rec ON r.idRecepcionista = rec.idRecepcionista", conexion))
+            using (var conexion = GetConnection())
             {
-                comando.CommandType = CommandType.Text;
                 conexion.Open();
+                string query = @"
+                    SELECT r.idReserva, r.idCliente, r.idRecepcionista, r.precioTotal, r.estado,
+                           c.nombre + ' ' + c.apellido as nombreCliente,
+                           rec.nombre + ' ' + rec.apellido as nombreRecepcionista
+                    FROM Reserva r
+                    INNER JOIN Cliente c ON r.idCliente = c.idCliente
+                    INNER JOIN Recepcionista rec ON r.idRecepcionista = rec.idRecepcionista";
 
-                using (var lector = comando.ExecuteReader())
+                using (var comando = new SqlCommand(query, conexion))
                 {
-                    while (lector.Read())
+                    using (var lector = comando.ExecuteReader())
                     {
-                        var aux = new Reserva
+                        while (lector.Read())
                         {
-                            IdReserva = lector.GetInt32(0),
-                            IdCliente = lector.GetInt32(1),
-                            IdRecepcionista = lector.GetInt32(2),
-                            PrecioTotal = lector.GetDecimal(3),
-                            Estado = lector.GetString(4),
-                            NombreCliente = lector.GetString(5),
-                            NombreRecepcionista = lector.GetString(6)
-                        };
-                        listaReservas.Add(aux);
+                            listaReservas.Add(new Reserva
+                            {
+                                IdReserva = lector.IsDBNull(0) ? 0 : Convert.ToInt32(lector.GetValue(0)),
+                                IdCliente = lector.IsDBNull(1) ? 0 : Convert.ToInt32(lector.GetValue(1)),
+                                IdRecepcionista = lector.IsDBNull(2) ? 0 : Convert.ToInt32(lector.GetValue(2)),
+                                PrecioTotal = lector.IsDBNull(3) ? 0 : Convert.ToDecimal(lector.GetValue(3)),
+                                Estado = lector.IsDBNull(4) ? string.Empty : lector.GetString(4),
+                                NombreCliente = lector.IsDBNull(5) ? string.Empty : lector.GetString(5),
+                                NombreRecepcionista = lector.IsDBNull(6) ? string.Empty : lector.GetString(6)
+                            });
+                        }
                     }
                 }
             }
@@ -49,44 +56,63 @@ namespace _3_DAL
 
         public void Agregar(Reserva nueva)
         {
-            using (var conexion = new SqlConnection(Cadena))
-            using (var comando = new SqlCommand(
-                @"INSERT INTO Reserva (idCliente, idRecepcionista, precioTotal, estado) 
-                  VALUES (@idCliente, @idRecepcionista, @precioTotal, @estado)", conexion))
+            using (var conexion = GetConnection())
             {
-                comando.CommandType = CommandType.Text;
-
-                comando.Parameters.AddWithValue("@idCliente", nueva.IdCliente);
-                comando.Parameters.AddWithValue("@idRecepcionista", nueva.IdRecepcionista);
-                comando.Parameters.AddWithValue("@precioTotal", nueva.PrecioTotal);
-                comando.Parameters.AddWithValue("@estado", nueva.Estado);
-
                 conexion.Open();
-                comando.ExecuteNonQuery();
+                string query = @"
+                    INSERT INTO Reserva (idCliente, idRecepcionista, precioTotal, estado)
+                    VALUES (@idCliente, @idRecepcionista, @precioTotal, @estado)";
+
+                using (var comando = new SqlCommand(query, conexion))
+                {
+                    comando.Parameters.AddWithValue("@idCliente", nueva.IdCliente);
+                    comando.Parameters.AddWithValue("@idRecepcionista", nueva.IdRecepcionista);
+                    comando.Parameters.AddWithValue("@precioTotal", nueva.PrecioTotal);
+                    comando.Parameters.AddWithValue("@estado", nueva.Estado);
+
+                    comando.ExecuteNonQuery();
+                }
             }
         }
 
         public void Modificar(Reserva modificada)
         {
-            using (var conexion = new SqlConnection(Cadena))
-            using (var comando = new SqlCommand(
-                @"UPDATE Reserva
-                  SET idCliente = @idCliente,
-                      idRecepcionista = @idRecepcionista,
-                      precioTotal = @precioTotal,
-                      estado = @estado
-                  WHERE idReserva = @idReserva", conexion))
+            using (var conexion = GetConnection())
             {
-                comando.CommandType = CommandType.Text;
-
-                comando.Parameters.AddWithValue("@idReserva", modificada.IdReserva);
-                comando.Parameters.AddWithValue("@idCliente", modificada.IdCliente);
-                comando.Parameters.AddWithValue("@idRecepcionista", modificada.IdRecepcionista);
-                comando.Parameters.AddWithValue("@precioTotal", modificada.PrecioTotal);
-                comando.Parameters.AddWithValue("@estado", modificada.Estado);
-
                 conexion.Open();
-                comando.ExecuteNonQuery();
+                string query = @"
+                    UPDATE Reserva 
+                    SET idCliente = @idCliente,
+                        idRecepcionista = @idRecepcionista,
+                        precioTotal = @precioTotal,
+                        estado = @estado
+                    WHERE idReserva = @idReserva";
+
+                using (var comando = new SqlCommand(query, conexion))
+                {
+                    comando.Parameters.AddWithValue("@idReserva", modificada.IdReserva);
+                    comando.Parameters.AddWithValue("@idCliente", modificada.IdCliente);
+                    comando.Parameters.AddWithValue("@idRecepcionista", modificada.IdRecepcionista);
+                    comando.Parameters.AddWithValue("@precioTotal", modificada.PrecioTotal);
+                    comando.Parameters.AddWithValue("@estado", modificada.Estado);
+
+                    comando.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public void EliminarPorId(int id)
+        {
+            using (var conexion = GetConnection())
+            {
+                conexion.Open();
+                string query = "DELETE FROM Reserva WHERE idReserva = @id";
+
+                using (var comando = new SqlCommand(query, conexion))
+                {
+                    comando.Parameters.AddWithValue("@id", id);
+                    comando.ExecuteNonQuery();
+                }
             }
         }
 
@@ -94,36 +120,37 @@ namespace _3_DAL
         {
             var listaReservas = new List<Reserva>();
 
-            using (var conexion = new SqlConnection(Cadena))
-            using (var comando = new SqlCommand(@"
-                SELECT r.idReserva, r.idCliente, r.idRecepcionista, r.precioTotal, r.estado,
-                       c.nombre + ' ' + c.apellido as nombreCliente,
-                       rec.nombre + ' ' + rec.apellido as nombreRecepcionista
-                FROM Reserva r
-                INNER JOIN Cliente c ON r.idCliente = c.idCliente
-                INNER JOIN Recepcionista rec ON r.idRecepcionista = rec.idRecepcionista
-                WHERE c.nombre LIKE @patron OR c.apellido LIKE @patron OR c.dni LIKE @patron", conexion))
+            using (var conexion = GetConnection())
             {
-                comando.CommandType = CommandType.Text;
-                comando.Parameters.AddWithValue("@patron", "%" + (busca ?? string.Empty) + "%");
-
                 conexion.Open();
+                string query = @"
+                    SELECT r.idReserva, r.idCliente, r.idRecepcionista, r.precioTotal, r.estado,
+                           c.nombre + ' ' + c.apellido as nombreCliente,
+                           rec.nombre + ' ' + rec.apellido as nombreRecepcionista
+                    FROM Reserva r
+                    INNER JOIN Cliente c ON r.idCliente = c.idCliente
+                    INNER JOIN Recepcionista rec ON r.idRecepcionista = rec.idRecepcionista
+                    WHERE c.nombre LIKE @patron OR c.apellido LIKE @patron OR c.dni LIKE @patron";
 
-                using (var lector = comando.ExecuteReader())
+                using (var comando = new SqlCommand(query, conexion))
                 {
-                    while (lector.Read())
+                    comando.Parameters.AddWithValue("@patron", "%" + (busca ?? string.Empty) + "%");
+
+                    using (var lector = comando.ExecuteReader())
                     {
-                        var aux = new Reserva
+                        while (lector.Read())
                         {
-                            IdReserva = lector.GetInt32(0),
-                            IdCliente = lector.GetInt32(1),
-                            IdRecepcionista = lector.GetInt32(2),
-                            PrecioTotal = lector.GetDecimal(3),
-                            Estado = lector.GetString(4),
-                            NombreCliente = lector.GetString(5),
-                            NombreRecepcionista = lector.GetString(6)
-                        };
-                        listaReservas.Add(aux);
+                            listaReservas.Add(new Reserva
+                            {
+                                IdReserva = lector.IsDBNull(0) ? 0 : Convert.ToInt32(lector.GetValue(0)),
+                                IdCliente = lector.IsDBNull(1) ? 0 : Convert.ToInt32(lector.GetValue(1)),
+                                IdRecepcionista = lector.IsDBNull(2) ? 0 : Convert.ToInt32(lector.GetValue(2)),
+                                PrecioTotal = lector.IsDBNull(3) ? 0 : Convert.ToDecimal(lector.GetValue(3)),
+                                Estado = lector.IsDBNull(4) ? string.Empty : lector.GetString(4),
+                                NombreCliente = lector.IsDBNull(5) ? string.Empty : lector.GetString(5),
+                                NombreRecepcionista = lector.IsDBNull(6) ? string.Empty : lector.GetString(6)
+                            });
+                        }
                     }
                 }
             }
@@ -131,47 +158,39 @@ namespace _3_DAL
             return listaReservas;
         }
 
-        public void EliminarPorId(int id)
-        {
-            using (var conexion = new SqlConnection(Cadena))
-            using (var comando = new SqlCommand(
-                @"DELETE FROM Reserva WHERE idReserva = @id", conexion))
-            {
-                comando.Parameters.AddWithValue("@id", id);
-                conexion.Open();
-                comando.ExecuteNonQuery();
-            }
-        }
-
         public Reserva ObtenerPorId(int id)
         {
-            using (var conexion = new SqlConnection(Cadena))
-            using (var comando = new SqlCommand(@"
-                SELECT r.idReserva, r.idCliente, r.idRecepcionista, r.precioTotal, r.estado,
-                       c.nombre + ' ' + c.apellido as nombreCliente,
-                       rec.nombre + ' ' + rec.apellido as nombreRecepcionista
-                FROM Reserva r
-                INNER JOIN Cliente c ON r.idCliente = c.idCliente
-                INNER JOIN Recepcionista rec ON r.idRecepcionista = rec.idRecepcionista
-                WHERE r.idReserva = @id", conexion))
+            using (var conexion = GetConnection())
             {
-                comando.Parameters.AddWithValue("@id", id);
                 conexion.Open();
+                string query = @"
+                    SELECT r.idReserva, r.idCliente, r.idRecepcionista, r.precioTotal, r.estado,
+                           c.nombre + ' ' + c.apellido as nombreCliente,
+                           rec.nombre + ' ' + rec.apellido as nombreRecepcionista
+                    FROM Reserva r
+                    INNER JOIN Cliente c ON r.idCliente = c.idCliente
+                    INNER JOIN Recepcionista rec ON r.idRecepcionista = rec.idRecepcionista
+                    WHERE r.idReserva = @id";
 
-                using (var lector = comando.ExecuteReader())
+                using (var comando = new SqlCommand(query, conexion))
                 {
-                    if (lector.Read())
+                    comando.Parameters.AddWithValue("@id", id);
+
+                    using (var lector = comando.ExecuteReader())
                     {
-                        return new Reserva
+                        if (lector.Read())
                         {
-                            IdReserva = lector.GetInt32(0),
-                            IdCliente = lector.GetInt32(1),
-                            IdRecepcionista = lector.GetInt32(2),
-                            PrecioTotal = lector.GetDecimal(3),
-                            Estado = lector.GetString(4),
-                            NombreCliente = lector.GetString(5),
-                            NombreRecepcionista = lector.GetString(6)
-                        };
+                            return new Reserva
+                            {
+                                IdReserva = lector.IsDBNull(0) ? 0 : Convert.ToInt32(lector.GetValue(0)),
+                                IdCliente = lector.IsDBNull(1) ? 0 : Convert.ToInt32(lector.GetValue(1)),
+                                IdRecepcionista = lector.IsDBNull(2) ? 0 : Convert.ToInt32(lector.GetValue(2)),
+                                PrecioTotal = lector.IsDBNull(3) ? 0 : Convert.ToDecimal(lector.GetValue(3)),
+                                Estado = lector.IsDBNull(4) ? string.Empty : lector.GetString(4),
+                                NombreCliente = lector.IsDBNull(5) ? string.Empty : lector.GetString(5),
+                                NombreRecepcionista = lector.IsDBNull(6) ? string.Empty : lector.GetString(6)
+                            };
+                        }
                     }
                 }
             }
