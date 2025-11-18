@@ -123,6 +123,9 @@
     <EmbeddedResource Include="frmRegistrarHabitacion.resx">
       <DependentUpon>frmRegistrarHabitacion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistrarReserva.resx">
+      <DependentUpon>frmRegistrarReserva.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmReserva.resx">
       <DependentUpon>frmReserva.cs</DependentUpon>
     </EmbeddedResource>

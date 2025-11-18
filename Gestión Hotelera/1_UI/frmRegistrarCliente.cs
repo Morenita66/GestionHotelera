@@ -81,5 +81,10 @@ namespace _1_UI
             LimpiarControles();
             this.Close();
         }
+
+        private void frmRegistrarCliente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

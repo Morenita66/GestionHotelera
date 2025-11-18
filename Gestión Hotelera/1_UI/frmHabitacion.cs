@@ -82,22 +82,22 @@ namespace _1_UI
 
 
 
-            Habitacion borrar = new Habitacion(); //vamos a crear un objeto auxiliar de cliente
+            Habitacion borrar = new Habitacion(); 
 
-            // Obtenemos el ID desde la grilla (¡importante: nombre de columna exacto!)
-            borrar.IdHabitacion = (int)dgvHabitacion.CurrentRow.Cells["idHabitacion"].Value; //esta es la forma en la que vamos a obtener el id 
+            // Obtenemos el ID desde la grilla 
+            borrar.IdHabitacion = (int)dgvHabitacion.CurrentRow.Cells["idHabitacion"].Value;
 
             if
                 (MessageBox.Show("¿Desea eliminar esta habitacion?", "Confirmación",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) //aca confirmamos si desea eliminar al cliente
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) 
             {
 
-                ConexionHabitacion conexion = new ConexionHabitacion(); //aca vamos a llamar al metodo eliminar que creamos 
+                ConexionHabitacion conexion = new ConexionHabitacion();
                 conexion.Eliminar(borrar);
 
 
-                MessageBox.Show("Cliente eliminado correctamente"); //aca vamos a mostrar el mensaje que indica que ya se elimino 
-                CargarHabitacion(); // este metodo vuelve a cargar al cliente ahora con el eliminado
+                MessageBox.Show("Cliente eliminado correctamente"); 
+                CargarHabitacion(); 
             }
         }
         private void LimpiarCampos()
@@ -114,46 +114,32 @@ namespace _1_UI
         }
 
         // Modificar habitación
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-            frmModificarHabitacion form = new frmModificarHabitacion();
-           /* form.FormClosed += (s, args) => ModificarHabitaciones();
-            form.ShowDialog();*/
-        }
-
-      
 
         private void frmHabitaciones_Load(object sender, EventArgs e)
         {
             CargarHabitacion();
         }
 
-        private void grbBusqueda_Enter(object sender, EventArgs e)
-        {
-
-        }
         // Volver al menu 
         private void btnVolver_Click_1(object sender, EventArgs e)
         {
             frmMenu menu = new frmMenu();
             menu.Show();
-            this.Hide();
-        }
-
-        private void txtBuscar_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnlDatos_Paint(object sender, PaintEventArgs e)
-        {
-                
+            this.Close();
         }
 
         private void btnNuevo_Click_1(object sender, EventArgs e)
         {
             frmRegistrarHabitacion datos = new frmRegistrarHabitacion();
             datos.Show();
+            this.Hide();
+        }
+
+        private void btnModificar_Click_1(object sender, EventArgs e)
+        {
+            Habitacion habitacion = dgvHabitacion.CurrentRow.DataBoundItem as Habitacion;
+            frmModificarHabitacion form = new frmModificarHabitacion(habitacion);
+            form.Show();
             this.Hide();
         }
     }

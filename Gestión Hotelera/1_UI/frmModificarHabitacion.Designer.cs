@@ -60,7 +60,6 @@
             this.lblModificarHabitacion.Size = new System.Drawing.Size(243, 31);
             this.lblModificarHabitacion.TabIndex = 28;
             this.lblModificarHabitacion.Text = "Modificar Habitación";
-            this.lblModificarHabitacion.Click += new System.EventHandler(this.lblRegistrarHabitacion_Click);
             // 
             // btnCancelar
             // 
@@ -86,6 +85,7 @@
             this.btnGuardar.TabIndex = 26;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click_1);
             // 
             // groupBox4
             // 
@@ -100,7 +100,6 @@
             this.groupBox4.TabIndex = 25;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Estado";
-            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
             // txtEstado
             // 

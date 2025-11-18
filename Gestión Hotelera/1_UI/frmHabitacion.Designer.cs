@@ -62,7 +62,6 @@
             // 
             this.grbBusqueda.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.grbBusqueda.Controls.Add(this.txtBuscar);
-            this.grbBusqueda.Controls.Add(this.btnEliminar);
             this.grbBusqueda.Controls.Add(this.btnBuscar);
             this.grbBusqueda.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.grbBusqueda.Location = new System.Drawing.Point(929, 13);
@@ -73,7 +72,6 @@
             this.grbBusqueda.TabIndex = 5;
             this.grbBusqueda.TabStop = false;
             this.grbBusqueda.Text = "Búsqueda por id";
-            this.grbBusqueda.Enter += new System.EventHandler(this.grbBusqueda_Enter);
             // 
             // txtBuscar
             // 
@@ -82,17 +80,16 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(172, 27);
             this.txtBuscar.TabIndex = 0;
-            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.ForestGreen;
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnEliminar.Location = new System.Drawing.Point(13, 114);
+            this.btnEliminar.Location = new System.Drawing.Point(301, 86);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(173, 34);
+            this.btnEliminar.Size = new System.Drawing.Size(133, 38);
             this.btnEliminar.TabIndex = 2;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -121,7 +118,6 @@
             this.pnlDatos.Name = "pnlDatos";
             this.pnlDatos.Size = new System.Drawing.Size(867, 369);
             this.pnlDatos.TabIndex = 4;
-            this.pnlDatos.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlDatos_Paint);
             // 
             // dgvHabitacion
             // 
@@ -169,11 +165,13 @@
             this.btnModificar.TabIndex = 8;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click_1);
             // 
             // grbDatos
             // 
             this.grbDatos.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.grbDatos.Controls.Add(this.btnModificar);
+            this.grbDatos.Controls.Add(this.btnEliminar);
             this.grbDatos.Controls.Add(this.btnNuevo);
             this.grbDatos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.grbDatos.Location = new System.Drawing.Point(-4, 359);

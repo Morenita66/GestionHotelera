@@ -139,5 +139,15 @@ namespace _1_UI
             cliente.Edad = (int)dgvCliente.SelectedRows[0].Cells["edad"].Value;
             cliente.IdDomicilio = (int)dgvCliente.SelectedRows[0].Cells["idDomicilio"].Value;
         }
+
+        private void gbBusqueda_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVolver_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

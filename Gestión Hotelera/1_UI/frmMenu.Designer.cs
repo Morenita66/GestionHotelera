@@ -78,7 +78,6 @@
             this.pnEstudiante.Name = "pnEstudiante";
             this.pnEstudiante.Size = new System.Drawing.Size(677, 464);
             this.pnEstudiante.TabIndex = 8;
-            this.pnEstudiante.Paint += new System.Windows.Forms.PaintEventHandler(this.pnEstudiante_Paint);
             // 
             // label1
             // 
@@ -86,7 +85,7 @@
             this.label1.BackColor = System.Drawing.Color.YellowGreen;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(197, 41);
+            this.label1.Location = new System.Drawing.Point(198, 58);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(275, 41);
             this.label1.TabIndex = 12;
@@ -131,7 +130,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmMenu";
             this.Text = "frmMenu";
-            this.Load += new System.EventHandler(this.frmMenu_Load);
             this.pnEstudiante.ResumeLayout(false);
             this.pnEstudiante.PerformLayout();
             this.ResumeLayout(false);

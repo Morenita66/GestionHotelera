@@ -23,11 +23,6 @@ namespace _1_UI
             Application.Exit();
         }
 
-        private void frmMenu_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCliente_Click(object sender, EventArgs e)
         {
             //generamos instancia del obj de la clase
@@ -46,16 +41,6 @@ namespace _1_UI
         {
             frmHabitacion frmHabitaciones = new frmHabitacion();
             frmHabitaciones.ShowDialog();
-        }
-
-        private void pnEstudiante_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btnOpciones_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
