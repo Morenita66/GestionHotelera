@@ -78,7 +78,6 @@
             this.pnEstudiante.Name = "pnEstudiante";
             this.pnEstudiante.Size = new System.Drawing.Size(677, 464);
             this.pnEstudiante.TabIndex = 8;
-            this.pnEstudiante.Paint += new System.Windows.Forms.PaintEventHandler(this.pnEstudiante_Paint);
             // 
             // label1
             // 
@@ -131,7 +130,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmMenu";
             this.Text = "frmMenu";
-            this.Load += new System.EventHandler(this.frmMenu_Load);
             this.pnEstudiante.ResumeLayout(false);
             this.pnEstudiante.PerformLayout();
             this.ResumeLayout(false);

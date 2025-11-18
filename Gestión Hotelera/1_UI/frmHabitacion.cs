@@ -114,22 +114,12 @@ namespace _1_UI
         }
 
         // Modificar habitación
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-            frmModificarHabitacion form = new frmModificarHabitacion();
-        }
-
-      
 
         private void frmHabitaciones_Load(object sender, EventArgs e)
         {
             CargarHabitacion();
         }
 
-        private void grbBusqueda_Enter(object sender, EventArgs e)
-        {
-
-        }
         // Volver al menu 
         private void btnVolver_Click_1(object sender, EventArgs e)
         {
@@ -138,20 +128,18 @@ namespace _1_UI
             this.Close();
         }
 
-        private void txtBuscar_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnlDatos_Paint(object sender, PaintEventArgs e)
-        {
-                
-        }
-
         private void btnNuevo_Click_1(object sender, EventArgs e)
         {
             frmRegistrarHabitacion datos = new frmRegistrarHabitacion();
             datos.Show();
+            this.Hide();
+        }
+
+        private void btnModificar_Click_1(object sender, EventArgs e)
+        {
+            Habitacion habitacion = dgvHabitacion.CurrentRow.DataBoundItem as Habitacion;
+            frmModificarHabitacion form = new frmModificarHabitacion(habitacion);
+            form.Show();
             this.Hide();
         }
     }

@@ -99,8 +99,7 @@ namespace _3_DAL
 
             conexion.ConnectionString = "data source=(localdb)\\MSSQLLocalDB; initial catalog=HotelDB; integrated security=sspi;";
             comando.CommandType = System.Data.CommandType.Text;
-            comando.CommandText = "update Habitacion set IdHabitacion=@idHabitacion,Tipo=@tipo,PrecioPorNoche=@precioPorNoche,Estado=@estado Where Id=" + habitacionModificar.IdHabitacion;
-            comando.Parameters.AddWithValue("@idHabitacion", habitacionModificar.IdHabitacion);
+            comando.CommandText = "update Habitacion set Tipo=@tipo,PrecioPorNoche=@precioPorNoche,Estado=@estado Where idHabitacion=" + habitacionModificar.IdHabitacion;
             comando.Parameters.AddWithValue("@tipo", habitacionModificar.Tipo);
             comando.Parameters.AddWithValue("@precioPorNoche", habitacionModificar.PrecioPorNoche);
             comando.Parameters.AddWithValue("@estado", habitacionModificar.Estado);
