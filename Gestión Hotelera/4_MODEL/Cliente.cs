@@ -16,6 +16,7 @@ namespace _4_MODEL
         private string _telefono;
         private string _dni;
         private int _edad;
+        private int _idDomicilio;
         //Aca van a estar las propiedades
         public int IdCliente { get => _idCliente; set => _idCliente=value; }
         public string Nombre { get => _nombre; set => _nombre=value; }
@@ -24,12 +25,13 @@ namespace _4_MODEL
         public string Telefono { get => _telefono; set => _telefono=value; }
         public string Dni { get => _dni; set => _dni=value; }
         public int Edad { get => _edad; set => _edad=value; }
+        public int IdDomicilio { get => _idDomicilio; set => _idDomicilio=value; }
 
         //Vamos a generar el constructor 
         public Cliente() { }
 
         //Vamos a generar el constructor por parametros
-        public Cliente(int idCliente, string nombre, string apellido, string email, string telefono, string dni, int edad)
+        public Cliente(int idCliente, string nombre, string apellido, string email, string telefono, string dni, int edad, int idDomicilio)
         {
             IdCliente=idCliente;
             _nombre=nombre;
@@ -37,7 +39,8 @@ namespace _4_MODEL
             _email=email;
             _telefono=telefono;
             _dni=dni;
-            Edad=edad;
+            _edad=edad;
+            _idDomicilio=idDomicilio;
 
         }
         public override string ToString()

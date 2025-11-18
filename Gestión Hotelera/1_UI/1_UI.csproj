@@ -76,6 +76,12 @@
     <Compile Include="frmModificarHabitacion.Designer.cs">
       <DependentUpon>frmModificarHabitacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRegistrarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistrarCliente.Designer.cs">
+      <DependentUpon>frmRegistrarCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRegistrarHabitacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmModificarHabitacion.resx">
       <DependentUpon>frmModificarHabitacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistrarCliente.resx">
+      <DependentUpon>frmRegistrarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegistrarHabitacion.resx">
       <DependentUpon>frmRegistrarHabitacion.cs</DependentUpon>
