@@ -79,7 +79,7 @@ namespace _1_UI
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             LimpiarControles();
-            this.Close();
+            this.Hide();
         }
 
         private void frmRegistrarCliente_Load(object sender, EventArgs e)

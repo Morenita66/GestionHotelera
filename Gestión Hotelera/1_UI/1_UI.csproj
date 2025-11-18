@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FmrModificarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmrModificarCliente.Designer.cs">
+      <DependentUpon>FmrModificarCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +108,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FmrModificarCliente.resx">
+      <DependentUpon>FmrModificarCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCliente.resx">
       <DependentUpon>FrmCliente.cs</DependentUpon>
     </EmbeddedResource>

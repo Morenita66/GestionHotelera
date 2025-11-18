@@ -134,8 +134,8 @@ namespace _3_DAL
                 conexion.ConnectionString="server=(localdb)\\MSSQLLocalDB; initial catalog=HotelDB; integrated security=sspi;";
                 comando.CommandType= System.Data.CommandType.Text;
 
-                comando.CommandText="UPDATE Cliente set IdCliente=@idCliente, Nombre=@nombre,Apellido=@apellido,Email = @email,Telefono = @telefono,Dni = @dni,Edad = @edad,IdDomicilio = @idDomicilio  WHERE idCliente = @idCliente\";"+modificado.IdCliente;
-                comando.Parameters.AddWithValue("idCliente", modificado.IdCliente);
+                comando.CommandText="UPDATE Cliente set  Nombre=@nombre,Apellido=@apellido,Email = @email,Telefono = @telefono,Dni = @dni,Edad = @edad,IdDomicilio = @idDomicilio  WHERE idCliente ="+modificado.IdCliente;
+
                 comando.Parameters.AddWithValue("@nombre", modificado.Nombre);
                 comando.Parameters.AddWithValue("@apellido", modificado.Apellido);
                 comando.Parameters.AddWithValue("email", modificado.Email);
@@ -156,6 +156,7 @@ namespace _3_DAL
 
                 throw;
             }
+
 
         }
        public void eliminar(Cliente eliminar)
