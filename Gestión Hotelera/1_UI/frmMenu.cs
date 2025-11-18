@@ -32,8 +32,8 @@ namespace _1_UI
 
         private void btnReserva_Click(object sender, EventArgs e)
         {
-            frmReserva datos = new frmReserva();
-            datos.Show();
+            frmReserva cargaDatos = new frmReserva();
+            cargaDatos.Show();
             this.Hide();
         }
 

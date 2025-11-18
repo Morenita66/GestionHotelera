@@ -1,80 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _4_MODEL
+﻿namespace _4_MODEL
 {
-     public class Reserva
+    public class Reserva
     {
+        private int _idReserva;
+        private int _idCliente;
+        private int _idRecepcionista;
+        private decimal _precioTotal;
+        private string _estado;
+        private string _nombreCliente;
+        private string _nombreRecepcionista;
 
-        private int idReserva;
-        private int idCliente;
-        private int idRecepcionista;
-        private decimal precioTotal;
-        private string estado;
-        private string nombreCliente;
-        private string nombreRecepcionista;
-
-        public int IdReserva { get => idReserva; set => idReserva = value; }
-
-        public int IdCliente
-        {
-            get => idCliente;
-            set
-            {
-                if (value <= 0)
-                    throw new ArgumentException("El ID de cliente debe ser mayor a 0.");
-                idCliente = value;
-            }
-        }
-
-        public int IdRecepcionista
-        {
-            get => idRecepcionista;
-            set
-            {
-                if (value <= 0)
-                    throw new ArgumentException("El ID de recepcionista debe ser mayor a 0.");
-                idRecepcionista = value;
-            }
-        }
-
-        public decimal PrecioTotal
-        {
-            get => precioTotal;
-            set
-            {
-                if (value < 0)
-                    throw new ArgumentException("El precio total no puede ser negativo.");
-                precioTotal = value;
-            }
-        }
-
-        public string Estado
-        {
-            get => estado;
-            set
-            {
-                if (string.IsNullOrWhiteSpace(value))
-                    throw new ArgumentException("El estado no puede estar vacio.");
-                estado = value.Trim();
-            }
-        }
-
-        public string NombreCliente
-        {
-            get => nombreCliente;
-            set => nombreCliente = value?.Trim();
-        }
-
-        public string NombreRecepcionista
-        {
-            get => nombreRecepcionista;
-            set => nombreRecepcionista = value?.Trim();
-        }
-
+        public int IdReserva { get => _idReserva; set => _idReserva = value; }
+        public int IdCliente { get => _idCliente; set => _idCliente = value; }
+        public int IdRecepcionista { get => _idRecepcionista; set => _idRecepcionista = value; }
+        public decimal PrecioTotal { get => _precioTotal; set => _precioTotal = value; }
+        public string Estado { get => _estado; set => _estado = value; }
+        public string NombreCliente { get => _nombreCliente; set => _nombreCliente = value; }
+        public string NombreRecepcionista { get => _nombreRecepcionista; set => _nombreRecepcionista = value; }
 
         // Constructor por defecto
         public Reserva() { }
