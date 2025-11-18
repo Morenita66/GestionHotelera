@@ -136,11 +136,11 @@ namespace _1_UI
             {
                 var fila = dgvReservas.Rows[e.RowIndex];
 
-                // Cargar los datos en los controles CORRECTOS de frmReserva
+               /* // Cargar los datos en los controles CORRECTOS de frmReserva
                 txtNombreCliente.Text = fila.Cells["NombreCliente"].Value?.ToString() ?? "";
                 txtRecepcionista.Text = fila.Cells["NombreRecepcionista"].Value?.ToString() ?? "";
                 txtTotal.Text = fila.Cells["PrecioTotal"].Value?.ToString() ?? "";
-                txtEstado.Text = fila.Cells["Estado"].Value?.ToString() ?? "";
+                txtEstado.Text = fila.Cells["Estado"].Value?.ToString() ?? "";*/
             }
         }
 
