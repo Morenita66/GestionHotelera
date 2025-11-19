@@ -5,6 +5,7 @@ namespace _3_DAL
 {
     public static class Configuracion
     {
+        // CONFIGURACIÓN SANTIAGO   
         // Valores por defecto
         private static string _server = "localhost";
         private static string _database = "HotelDB";
@@ -49,9 +50,9 @@ namespace _3_DAL
 
         private static void ActualizarCadenaConexion()
         {
-            _connectionString = $"Server={_server};Initial Catalog={_database};Integrated Security=True;Encrypt=True;TrustServerCertificate=True;";
+            _connectionString = "data source=(localdb)\\MSSQLLocalDB; initial catalog=HotelDB; integrated security=sspi;";
         }
-
+        //"data source=(localdb)\\MSSQLLocalDB; initial catalog=HotelDB; integrated security=sspi;";
         public static void CargarConfiguracion()
         {
             try

@@ -117,15 +117,15 @@ namespace _3_DAL
 
         public void Eliminar(Habitacion eliminar)
         {
-            
-            //conexion.ConnectionString = "server=(localdb)\\MSSQLLocalDB; initial catalog=HotelDB; integrated security=sspi;";
-            //comando.CommandType = System.Data.CommandType.Text;
-            //comando.CommandText = "DELETE FROM Habitacion WHERE idHabitacion = " + eliminar.IdHabitacion;
-            //comando.Connection = conexion;
 
-            //conexion.Open();
-            //comando.ExecuteNonQuery();
-            //conexion.Close();
+            conexion.ConnectionString = "server=(localdb)\\MSSQLLocalDB; initial catalog=HotelDB; integrated security=sspi;";
+            comando.CommandType = System.Data.CommandType.Text;
+            comando.CommandText = "DELETE FROM Habitacion WHERE idHabitacion = " + eliminar.IdHabitacion;
+            comando.Connection = conexion;
+
+            conexion.Open();
+            comando.ExecuteNonQuery();
+            conexion.Close();
 
         }
     }

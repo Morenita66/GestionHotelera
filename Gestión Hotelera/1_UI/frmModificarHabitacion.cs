@@ -61,7 +61,7 @@ namespace _1_UI
 
             conexion.Modificar(aux);
 
-            MessageBox.Show("Se modificó el la hbaitación", "Confirmación");
+            MessageBox.Show("Se modificó el la habitación", "Confirmación");
             this.Close();
             menuHabitacion.Show();
 

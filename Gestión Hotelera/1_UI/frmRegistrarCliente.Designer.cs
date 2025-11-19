@@ -114,6 +114,7 @@
             this.txtIdDomicilioRegistrar.Name = "txtIdDomicilioRegistrar";
             this.txtIdDomicilioRegistrar.Size = new System.Drawing.Size(233, 22);
             this.txtIdDomicilioRegistrar.TabIndex = 1;
+            this.txtIdDomicilioRegistrar.TextChanged += new System.EventHandler(this.txtIdDomicilioRegistrar_TextChanged);
             // 
             // lblIdDomicilioRegistrar
             // 

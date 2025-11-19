@@ -48,10 +48,10 @@
             this.btnVolver.BackColor = System.Drawing.Color.ForestGreen;
             this.btnVolver.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnVolver.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnVolver.Location = new System.Drawing.Point(655, 355);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(4);
+            this.btnVolver.Location = new System.Drawing.Point(873, 437);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(124, 65);
+            this.btnVolver.Size = new System.Drawing.Size(165, 80);
             this.btnVolver.TabIndex = 69;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = false;
@@ -102,18 +102,21 @@
             this.gbBusqueda.Controls.Add(this.txtBusquedaCliente);
             this.gbBusqueda.Controls.Add(this.btnBuscar);
             this.gbBusqueda.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.gbBusqueda.Location = new System.Drawing.Point(639, -1);
+            this.gbBusqueda.Location = new System.Drawing.Point(852, -1);
+            this.gbBusqueda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbBusqueda.Name = "gbBusqueda";
-            this.gbBusqueda.Size = new System.Drawing.Size(150, 280);
+            this.gbBusqueda.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbBusqueda.Size = new System.Drawing.Size(200, 345);
             this.gbBusqueda.TabIndex = 6;
             this.gbBusqueda.TabStop = false;
             this.gbBusqueda.Text = "Búsqueda por nombre";
             // 
             // txtBusquedaCliente
             // 
-            this.txtBusquedaCliente.Location = new System.Drawing.Point(10, 30);
+            this.txtBusquedaCliente.Location = new System.Drawing.Point(13, 37);
+            this.txtBusquedaCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBusquedaCliente.Name = "txtBusquedaCliente";
-            this.txtBusquedaCliente.Size = new System.Drawing.Size(130, 23);
+            this.txtBusquedaCliente.Size = new System.Drawing.Size(172, 27);
             this.txtBusquedaCliente.TabIndex = 0;
             // 
             // btnBuscar
@@ -121,10 +124,10 @@
             this.btnBuscar.BackColor = System.Drawing.Color.ForestGreen;
             this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnBuscar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBuscar.Location = new System.Drawing.Point(10, 59);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscar.Location = new System.Drawing.Point(13, 73);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(130, 28);
+            this.btnBuscar.Size = new System.Drawing.Size(173, 34);
             this.btnBuscar.TabIndex = 1;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -140,11 +143,11 @@
             this.dgvCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCliente.BackgroundColor = System.Drawing.Color.Silver;
             this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCliente.Location = new System.Drawing.Point(-3, -1);
-            this.dgvCliente.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvCliente.Location = new System.Drawing.Point(-4, -1);
+            this.dgvCliente.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.dgvCliente.Name = "dgvCliente";
             this.dgvCliente.RowHeadersWidth = 51;
-            this.dgvCliente.Size = new System.Drawing.Size(635, 280);
+            this.dgvCliente.Size = new System.Drawing.Size(847, 345);
             this.dgvCliente.TabIndex = 68;
             // 
             // btnModificarCliente
@@ -152,9 +155,10 @@
             this.btnModificarCliente.BackColor = System.Drawing.Color.ForestGreen;
             this.btnModificarCliente.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnModificarCliente.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnModificarCliente.Location = new System.Drawing.Point(20, 388);
+            this.btnModificarCliente.Location = new System.Drawing.Point(27, 478);
+            this.btnModificarCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnModificarCliente.Name = "btnModificarCliente";
-            this.btnModificarCliente.Size = new System.Drawing.Size(104, 32);
+            this.btnModificarCliente.Size = new System.Drawing.Size(139, 39);
             this.btnModificarCliente.TabIndex = 71;
             this.btnModificarCliente.Text = "Modificar";
             this.btnModificarCliente.UseVisualStyleBackColor = false;
@@ -165,9 +169,10 @@
             this.brnEliminarCliente.BackColor = System.Drawing.Color.ForestGreen;
             this.brnEliminarCliente.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.brnEliminarCliente.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.brnEliminarCliente.Location = new System.Drawing.Point(249, 388);
+            this.brnEliminarCliente.Location = new System.Drawing.Point(332, 478);
+            this.brnEliminarCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.brnEliminarCliente.Name = "brnEliminarCliente";
-            this.brnEliminarCliente.Size = new System.Drawing.Size(130, 32);
+            this.brnEliminarCliente.Size = new System.Drawing.Size(173, 39);
             this.brnEliminarCliente.TabIndex = 70;
             this.brnEliminarCliente.Text = "Eliminar";
             this.brnEliminarCliente.UseVisualStyleBackColor = false;
@@ -178,9 +183,10 @@
             this.btnNuevoCliente.BackColor = System.Drawing.Color.ForestGreen;
             this.btnNuevoCliente.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnNuevoCliente.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNuevoCliente.Location = new System.Drawing.Point(130, 388);
+            this.btnNuevoCliente.Location = new System.Drawing.Point(173, 478);
+            this.btnNuevoCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNuevoCliente.Name = "btnNuevoCliente";
-            this.btnNuevoCliente.Size = new System.Drawing.Size(100, 32);
+            this.btnNuevoCliente.Size = new System.Drawing.Size(133, 39);
             this.btnNuevoCliente.TabIndex = 72;
             this.btnNuevoCliente.Text = "Nuevo";
             this.btnNuevoCliente.UseVisualStyleBackColor = false;
@@ -188,19 +194,19 @@
             // 
             // FrmCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.btnModificarCliente);
             this.Controls.Add(this.brnEliminarCliente);
             this.Controls.Add(this.btnNuevoCliente);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.gbBusqueda);
             this.Controls.Add(this.dgvCliente);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "FrmCliente";
-            this.Text = "FrmCliente";
+            this.Text = "Cliente";
             this.Load += new System.EventHandler(this.FrmCliente_Load);
             this.gbBusqueda.ResumeLayout(false);
             this.gbBusqueda.PerformLayout();
