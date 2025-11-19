@@ -27,20 +27,29 @@ namespace _1_UI
         {
             //generamos instancia del obj de la clase
             FrmCliente frmCliente = new FrmCliente();
+            this.Hide();
             frmCliente.ShowDialog();
         }
 
         private void btnReserva_Click(object sender, EventArgs e)
-        {
+        {   
             frmReserva cargaDatos = new frmReserva();
-            cargaDatos.Show();
             this.Hide();
+            cargaDatos.Show();
+            ;
         }
 
         private void btnHabitación_Click(object sender, EventArgs e)
-        {
+        {   //generamos instancia del obj de la clase
             frmHabitacion frmHabitaciones = new frmHabitacion();
+            this.Hide();
             frmHabitaciones.ShowDialog();
+            
+        }
+
+        private void pnEstudiante_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

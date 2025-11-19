@@ -78,6 +78,7 @@
             this.pnEstudiante.Name = "pnEstudiante";
             this.pnEstudiante.Size = new System.Drawing.Size(677, 464);
             this.pnEstudiante.TabIndex = 8;
+            this.pnEstudiante.Paint += new System.Windows.Forms.PaintEventHandler(this.pnEstudiante_Paint);
             // 
             // label1
             // 

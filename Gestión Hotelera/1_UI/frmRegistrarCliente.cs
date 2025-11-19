@@ -86,5 +86,10 @@ namespace _1_UI
         {
 
         }
+
+        private void txtIdDomicilioRegistrar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cmbCliente = new System.Windows.Forms.ComboBox(); // 👈 Cambiado de TextBox a ComboBox
+            this.cmbCliente = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cmbRecepcionista = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -47,11 +47,13 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.cmbCliente); // 👈 Cambiado de txtCliente a cmbCliente
+            this.groupBox1.Controls.Add(this.cmbCliente);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
-            this.groupBox1.Location = new System.Drawing.Point(47, 76);
+            this.groupBox1.Location = new System.Drawing.Point(63, 94);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(350, 60);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(467, 74);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cliente";
@@ -59,18 +61,21 @@
             // cmbCliente
             // 
             this.cmbCliente.FormattingEnabled = true;
-            this.cmbCliente.Location = new System.Drawing.Point(9, 25);
-            this.cmbCliente.Name = "cmbCliente"; // 👈 Cambiado de txtCliente a cmbCliente
-            this.cmbCliente.Size = new System.Drawing.Size(331, 27);
+            this.cmbCliente.Location = new System.Drawing.Point(12, 31);
+            this.cmbCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbCliente.Name = "cmbCliente";
+            this.cmbCliente.Size = new System.Drawing.Size(440, 31);
             this.cmbCliente.TabIndex = 1;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.cmbRecepcionista);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
-            this.groupBox2.Location = new System.Drawing.Point(47, 142);
+            this.groupBox2.Location = new System.Drawing.Point(63, 175);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(350, 60);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(467, 74);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Recepcionista";
@@ -78,36 +83,42 @@
             // cmbRecepcionista
             // 
             this.cmbRecepcionista.FormattingEnabled = true;
-            this.cmbRecepcionista.Location = new System.Drawing.Point(9, 25);
+            this.cmbRecepcionista.Location = new System.Drawing.Point(12, 31);
+            this.cmbRecepcionista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbRecepcionista.Name = "cmbRecepcionista";
-            this.cmbRecepcionista.Size = new System.Drawing.Size(331, 27);
+            this.cmbRecepcionista.Size = new System.Drawing.Size(440, 31);
             this.cmbRecepcionista.TabIndex = 1;
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.txtTotal);
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
-            this.groupBox3.Location = new System.Drawing.Point(47, 208);
+            this.groupBox3.Location = new System.Drawing.Point(63, 256);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(350, 60);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Size = new System.Drawing.Size(467, 74);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Total";
             // 
             // txtTotal
             // 
-            this.txtTotal.Location = new System.Drawing.Point(9, 25);
+            this.txtTotal.Location = new System.Drawing.Point(12, 31);
+            this.txtTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(331, 26);
+            this.txtTotal.Size = new System.Drawing.Size(440, 30);
             this.txtTotal.TabIndex = 1;
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.cmbEstado);
             this.groupBox4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
-            this.groupBox4.Location = new System.Drawing.Point(47, 274);
+            this.groupBox4.Location = new System.Drawing.Point(63, 337);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(350, 60);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Size = new System.Drawing.Size(467, 74);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Estado";
@@ -119,9 +130,10 @@
             "Activa",
             "Cancelada",
             "Finalizada"});
-            this.cmbEstado.Location = new System.Drawing.Point(9, 25);
+            this.cmbEstado.Location = new System.Drawing.Point(12, 31);
+            this.cmbEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbEstado.Name = "cmbEstado";
-            this.cmbEstado.Size = new System.Drawing.Size(331, 27);
+            this.cmbEstado.Size = new System.Drawing.Size(440, 31);
             this.cmbEstado.TabIndex = 1;
             // 
             // btnGuardar
@@ -129,9 +141,10 @@
             this.btnGuardar.BackColor = System.Drawing.Color.ForestGreen;
             this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnGuardar.Location = new System.Drawing.Point(225, 344);
+            this.btnGuardar.Location = new System.Drawing.Point(300, 423);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 30);
+            this.btnGuardar.Size = new System.Drawing.Size(100, 37);
             this.btnGuardar.TabIndex = 4;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -142,9 +155,10 @@
             this.btnCancelar.BackColor = System.Drawing.Color.ForestGreen;
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCancelar.Location = new System.Drawing.Point(315, 344);
+            this.btnCancelar.Location = new System.Drawing.Point(420, 423);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 30);
+            this.btnCancelar.Size = new System.Drawing.Size(100, 37);
             this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -156,19 +170,18 @@
             this.lblResgistarReserva.BackColor = System.Drawing.Color.YellowGreen;
             this.lblResgistarReserva.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblResgistarReserva.ForeColor = System.Drawing.Color.White;
-            this.lblResgistarReserva.Location = new System.Drawing.Point(119, 27);
-            this.lblResgistarReserva.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblResgistarReserva.Location = new System.Drawing.Point(159, 33);
             this.lblResgistarReserva.Name = "lblResgistarReserva";
-            this.lblResgistarReserva.Size = new System.Drawing.Size(213, 32);
+            this.lblResgistarReserva.Size = new System.Drawing.Size(263, 41);
             this.lblResgistarReserva.TabIndex = 6;
             this.lblResgistarReserva.Text = "Registrar Reserva";
             // 
             // frmRegistrarReserva
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.ClientSize = new System.Drawing.Size(453, 401);
+            this.ClientSize = new System.Drawing.Size(604, 494);
             this.Controls.Add(this.lblResgistarReserva);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
@@ -177,12 +190,13 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmRegistrarReserva";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "frmRegistrarReserva";
+            this.Load += new System.EventHandler(this.frmRegistrarReserva_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);

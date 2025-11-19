@@ -191,5 +191,10 @@ namespace _1_UI
         }
 
         private void btnCancelar_Click(object sender, EventArgs e) => Close();
+
+        private void frmRegistrarReserva_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -142,5 +142,10 @@ namespace _1_UI
             form.Show();
             this.Hide();
         }
+
+        private void grbBusqueda_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
